@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, ArrowUpRight } from 'lucide-react';
+import logo from '../logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link to="/" className="flex items-center group">
               <img 
-                src="/src/logo.png" 
+                src={logo} 
                 alt="YOUKNOW Logo" 
                 className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
                 referrerPolicy="no-referrer" 

@@ -3,6 +3,7 @@ import { LayoutGroup } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight, Globe } from 'lucide-react';
+import logo from '../logo.png';
 
 const navLinks = [
   { name: 'Accueil', path: '/' },
@@ -33,7 +34,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <img 
-            src="/src/logo.png" 
+            src={logo} 
             alt="YOUKNOW" 
             className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             referrerPolicy="no-referrer" 
