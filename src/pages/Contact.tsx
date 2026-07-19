@@ -192,7 +192,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-3">
+                 <div className="space-y-3">
                   <label className="text-[10px] uppercase tracking-[0.4em] font-black text-slate-500 ml-1 italic">Type_Intervention</label>
                   <select 
                     className="w-full px-8 py-5 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-all font-bold appearance-none cursor-pointer"
@@ -200,11 +200,11 @@ export default function Contact() {
                     onChange={e => setFormState({...formState, subject: e.target.value})}
                   >
                     <option value="" className="bg-slate-900 border-none">SÉLECTIONNEZ UNE OPTION</option>
-                    <option value="devis" className="bg-slate-900 border-none">DEMANDE DE DEVIS IT</option>
-                    <option value="partenariat" className="bg-slate-900 border-none">ALLIANCE STRATÉGIQUE</option>
-                    <option value="support" className="bg-slate-900 border-none">MAINTENANCE_LEVEL_3</option>
-                    <option value="carrieres" className="bg-slate-900 border-none">TALENT_RECRUITMENT</option>
-                    <option value="autre" className="bg-slate-900 border-none">PROTOCOLE_DIVERS</option>
+                    <option value="devis" className="bg-slate-900 border-none">DEMANDE DE DEVIS (WEB / MOBILE / IA)</option>
+                    <option value="formation" className="bg-slate-900 border-none">INSCRIPTION À UNE FORMATION (15 JOURS)</option>
+                    <option value="sastock" className="bg-slate-900 border-none">DEMANDE DE DÉMO LOGICIEL SASTOCK</option>
+                    <option value="support" className="bg-slate-900 border-none">SUPPORT TECHNIQUE & MAINTENANCE</option>
+                    <option value="autre" className="bg-slate-900 border-none">AUTRE COMMANDE / PROTOCOLE DIVERS</option>
                   </select>
                 </div>
 

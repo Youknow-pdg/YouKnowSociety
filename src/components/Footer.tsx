@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-              Groupe technologique innovant supervisant des entreprises leaders pour propulser votre transformation numérique avec excellence et sécurité.
+              Groupe holding technologique international supervisant des filiales d'excellence pour propulser votre transformation numérique avec rigueur et innovation.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 hover:text-blue-400 transition-all">
@@ -35,9 +35,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-slate-500 uppercase tracking-widest text-[10px]">Services</h4>
+            <h4 className="font-bold mb-6 text-slate-500 uppercase tracking-widest text-[10px]">Services & Formations</h4>
             <ul className="space-y-4">
-              {['Développement Logiciel', 'Infrastructure Cloud', 'Cybersécurité', 'Support & Maintenance', 'Conseil IT'].map((item) => (
+              {['Développement Web & Logiciel', 'Intelligence Artificielle', 'Identité Visuelle & Multimédia', 'Maintenance & Support', 'Formations 100% En Ligne'].map((item) => (
                 <li key={item}>
                   <Link to="/services" className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1 group">
                     <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-blue-500" />

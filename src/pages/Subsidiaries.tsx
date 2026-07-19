@@ -1,36 +1,36 @@
 import { motion } from 'motion/react';
-import { ExternalLink, ShoppingBag, Terminal, Globe, Shield, Smartphone, Box } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Terminal, Globe, Shield, Smartphone, Box, BookOpen, Landmark, Car } from 'lucide-react';
 
 const subsidiaries = [
   {
-    name: 'YouKnow Tech',
-    sector: 'Développement & Cloud',
-    desc: 'Cœur technologique du groupe, spécialisé dans les architectures cloud et le développement logiciel complexe.',
+    name: 'YOU KNOW TECH',
+    sector: 'Développement, IA & SaaS (Actif)',
+    desc: 'Cœur technologique spécialisé en développement logiciel, applications web/mobiles, intégration d\'intelligence artificielle et solutions SaaS innovantes comme SASTOCK.',
     icon: Terminal,
     color: 'bg-blue-600',
     link: '#',
   },
   {
-    name: 'YouKnow Digital',
-    sector: 'Services Digitaux',
-    desc: 'Agence de transformation numérique accompagnant les entreprises dans leur stratégie de présence en ligne.',
-    icon: Globe,
-    color: 'bg-brand-600',
-    link: '#',
-  },
-  {
-    name: 'YouKnow Commerce',
-    sector: 'E-commerce Solutions',
-    desc: 'Expert en solutions de vente en ligne et plateformes de paiement sécurisées pour le retail moderne.',
+    name: 'YOU KNOW COMMERCE & FINANCE',
+    sector: 'Commerce & Solutions Financières (En projet)',
+    desc: 'Future filiale dédiée à la numérisation du commerce, aux micro-transactions, aux passerelles de paiement locales et à la gestion financière moderne.',
     icon: ShoppingBag,
     color: 'bg-indigo-600',
     link: '#',
   },
   {
-    name: 'YouKnow Secure',
-    sector: 'Cybersécurité',
-    desc: 'Unité dédiée à la protection des données, aux audits de sécurité et à la conformité réglementaire.',
-    icon: Shield,
+    name: 'YOU KNOW EDUCATION',
+    sector: 'Savoir & Formations Numériques (En projet)',
+    desc: 'Unité stratégique en cours de structuration pour centraliser l\'ensemble de nos formations pratiques en ligne et hybrides à travers l\'Afrique.',
+    icon: BookOpen,
+    color: 'bg-indigo-500',
+    link: '#',
+  },
+  {
+    name: 'YOU KNOW AUTO & MOBILITÉ',
+    sector: 'Industrie Automobile & Transport (En projet)',
+    desc: 'Division prospective explorant l\'intégration du numérique dans l\'automobile, les systèmes de transport intelligents et la mobilité connectée.',
+    icon: Car,
     color: 'bg-slate-800',
     link: '#',
   },

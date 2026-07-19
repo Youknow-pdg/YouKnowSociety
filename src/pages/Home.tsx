@@ -1,39 +1,39 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Cpu, ShieldCheck, Cloud, Layout as LayoutIcon, Laptop, Users, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Cpu, ShieldCheck, Cloud, Layout as LayoutIcon, Laptop, Users, CheckCircle2, BookOpen, TrendingUp, Database, ShoppingBag, Award, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
-    title: 'Développement Logiciel',
-    desc: 'Applications web, mobiles et solutions métiers sur mesure.',
+    title: 'Développement Web & Applications',
+    desc: 'Sites internet vitrines, e-commerce, applications web et mobiles sur mesure pour votre activité.',
     icon: Laptop,
     color: 'bg-blue-50 text-blue-600',
   },
   {
-    title: 'Infrastructure & Cloud',
-    desc: 'Solutions d\'hébergement hautement disponibles et scalables.',
-    icon: Cloud,
+    title: 'Intelligence Artificielle',
+    desc: 'Intégration d\'IA générative et automatisation intelligente des tâches pour booster votre productivité.',
+    icon: Cpu,
     color: 'bg-indigo-50 text-indigo-600',
   },
   {
-    title: 'Cybersécurité',
-    desc: 'Audit, protection des données et conformité réglementaire.',
-    icon: ShieldCheck,
+    title: 'Transformation Digitale',
+    desc: 'Conseil numérique, création d\'identités visuelles (logos, affiches), montage vidéo et voix off professionnelle.',
+    icon: LayoutIcon,
     color: 'bg-brand-50 text-brand-600',
   },
   {
-    title: 'Support & Maintenance',
-    desc: 'Support technique 24/7 pour garantir la continuité de vos activités.',
-    icon: Cpu,
+    title: 'Maintenance & Formations',
+    desc: 'Installation d\'OS (Windows, Linux), nettoyage complet d\'ordinateurs, support technique et formations pratiques.',
+    icon: BookOpen,
     color: 'bg-slate-50 text-slate-600',
   },
 ];
 
 const stats = [
-  { label: 'Entreprises', value: '5+' },
-  { label: 'Experts IT', value: '50+' },
-  { label: 'Clients Satisfaits', value: '200+' },
-  { label: 'Projets Réussis', value: '500+' },
+  { label: 'Filiales Spécialisées', value: 'YOU KNOW TECH' },
+  { label: 'Formations Pratiques', value: '100% En Ligne' },
+  { label: 'Logiciel SaaS Phare', value: 'SASTOCK' },
+  { label: 'Accompagnement Projets', value: 'De Bout en Bout' },
 ];
 
 export default function Home() {
@@ -72,28 +72,28 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-block px-3 py-1 mb-6 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-bold uppercase tracking-tighter">
-                Holding Technologique & Services Cloud
+                GROUPE HOLDING INTERNATIONAL DE TECHNOLOGIE
               </div>
               <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-[1.05] mb-8 italic">
-                Votre partenaire <br />
-                <span className="text-gradient underline decoration-blue-500/20">technologique</span>
+                Where Knowledge <br />
+                <span className="text-gradient underline decoration-blue-500/20">Meets Innovation</span>
               </h1>
               <p className="text-xl text-slate-400 mb-10 max-w-lg leading-relaxed font-medium">
-                YOUKNOW supervise un écosystème d'entreprises innovantes pour offrir des services informatiques de pointe : développement, infrastructure et cybersécurité.
+                YOU KNOW SOCIETY est un groupe holding technologique international spécialisé dans le numérique, l'innovation, la formation, le développement technologique et la transformation digitale. Là où le savoir rencontre l'innovation pour créer l'avenir.
               </p>
               <div className="flex flex-wrap gap-6">
                 <Link
                   to="/contact"
                   className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/40 flex items-center gap-2 group"
                 >
-                  Demander un devis
+                  Nous Contacter
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/services"
                   className="bg-white/5 backdrop-blur-xl border border-white/10 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-all flex items-center gap-2"
                 >
-                  Nos Services IT
+                  Nos Formations & Services
                 </Link>
               </div>
             </motion.div>
@@ -156,8 +156,8 @@ export default function Home() {
       {/* Services Section */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-xs uppercase tracking-[0.4em] font-black text-blue-500 mb-4 italic">Nos Services Core</h2>
-          <h3 className="text-4xl lg:text-6xl font-extrabold text-white tracking-tight">L'excellence au service du code.</h3>
+          <h2 className="text-xs uppercase tracking-[0.4em] font-black text-blue-500 mb-4 italic">Nos Services & Expertises</h2>
+          <h3 className="text-4xl lg:text-6xl font-extrabold text-white tracking-tight">L'excellence au service de l'innovation.</h3>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -182,29 +182,176 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SASTOCK Software Product Section */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="glass-card p-8 sm:p-16 relative overflow-hidden border border-white/10 bg-slate-950/60 rounded-[3rem]">
+          <div className="absolute top-0 right-0 -mt-20 -mr-20 text-blue-500/5 pointer-events-none">
+            <ShoppingBag size={400} />
+          </div>
+          <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-bold uppercase tracking-wider">
+                <Database size={14} /> LOGICIEL LOGO SAAS PAR YOU KNOW TECH
+              </div>
+              <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase italic leading-none">
+                SASTOCK
+              </h2>
+              <p className="text-xl font-bold text-blue-400 italic">
+                Votre stock sous contrôle. Vos bénéfices en croissance.
+              </p>
+              <p className="text-slate-400 leading-relaxed text-lg">
+                SASTOCK est un logiciel SaaS innovant conçu pour permettre aux commerçants, boutiques, magasins et vendeurs de gérer facilement leur stock et leurs ventes en temps réel.
+              </p>
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                {[
+                  'Gestion de stock',
+                  'Gestion des ventes',
+                  'Suivi des bénéfices',
+                  'Alertes de rupture de stock',
+                  'Connexion Google',
+                  'Tableaux de bord intuitifs',
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="text-blue-500 shrink-0" size={18} />
+                    <span className="text-sm font-semibold text-slate-300">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="pt-6">
+                <Link
+                  to="/contact"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-500 transition-all shadow-lg inline-flex items-center gap-2"
+                >
+                  Demander une démo de SASTOCK
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 bg-black/40 p-4">
+              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-900/30 via-slate-900 to-black flex flex-col justify-between p-8 relative">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full" />
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+                    <div className="w-3 h-3 bg-green-500 rounded-full" />
+                  </div>
+                  <span className="text-[10px] font-mono text-blue-400 uppercase tracking-widest">SASTOCK v1.0.0</span>
+                </div>
+                
+                <div className="my-auto space-y-6">
+                  <div className="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/10">
+                    <div>
+                      <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Ventes du jour</div>
+                      <div className="text-2xl font-black text-white font-mono">145 000 FCFA</div>
+                    </div>
+                    <span className="text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded">+12.5%</span>
+                  </div>
+                  <div className="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/10">
+                    <div>
+                      <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Bénéfice Net</div>
+                      <div className="text-2xl font-black text-blue-400 font-mono">42 800 FCFA</div>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-400">Temps réel</span>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center text-[10px] font-mono text-slate-600">
+                  <span>Secured with Google Cloud</span>
+                  <span className="text-green-500 animate-pulse">● Système Actif</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Online Formations Section */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5 space-y-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-xs font-bold uppercase tracking-wider">
+              <BookOpen size={14} /> APPRENDRE EN PRATIQUE
+            </div>
+            <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase italic leading-none">
+              Nos Formations <br /> <span className="text-gradient">100% En Ligne</span>
+            </h2>
+            <p className="text-slate-400 leading-relaxed text-lg">
+              Des formations orientées vers la pratique et la réalisation de projets concrets pour acquérir des compétences numériques hautement recherchées.
+            </p>
+            <div className="space-y-4">
+              {[
+                { t: 'Durée Optimale', d: '15 jours de formation intensive rythmés à 3 jours par semaine.' },
+                { t: 'Formations IA & Tech', d: 'Maîtrisez la création de sites web, d\'affiches et d\'automatisations grâce aux meilleurs outils IA.' },
+                { t: 'Tarifs Accessibles', d: 'Inscription à 5 000 FCFA et seulement 1 475 FCFA par cours dispensé.' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4 items-start">
+                  <div className="w-8 h-8 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm font-bold shrink-0">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-base">{item.t}</h4>
+                    <p className="text-slate-500 text-sm">{item.d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="pt-4">
+              <Link
+                to="/contact"
+                className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-500 transition-all shadow-lg inline-flex items-center gap-2"
+              >
+                S'inscrire à une formation
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+            {[
+              { t: 'Création de sites web avec l\'IA', d: 'Concevez des sites internet modernes et esthétiques en quelques heures en exploitant le plein potentiel de l\'IA.' },
+              { t: 'Création d\'affiches avec l\'IA', d: 'Développez des visuels publicitaires percutants et professionnels sans compétences préalables en design graphique.' },
+              { t: 'Automatisation des tâches', d: 'Gagnez un temps précieux au quotidien en automatisant vos flux de travail et vos processus administratifs.' },
+              { t: 'Informatique & Bureautique', d: 'Maîtrisez les fondamentaux du développement web, des outils bureautiques et de l\'informatique générale.' },
+            ].map((course, idx) => (
+              <div key={idx} className="glass-card p-8 border-white/5 hover:border-indigo-500/30 transition-all flex flex-col justify-between">
+                <div>
+                  <Award className="text-indigo-400 mb-6" size={28} />
+                  <h3 className="text-lg font-bold text-white mb-3">{course.t}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{course.d}</p>
+                </div>
+                <div className="pt-6 border-t border-white/5 mt-6 flex justify-between items-center">
+                  <span className="text-[10px] text-slate-400 font-black uppercase tracking-wider">PROJET CONCRET INCLUS</span>
+                  <span className="text-xs font-mono font-bold text-indigo-400">15 Jours</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="glass-card p-6 sm:p-12 lg:p-24 relative overflow-hidden bg-white/5 backdrop-blur-3xl border-white/10">
           <div className="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-8 tracking-tighter leading-none italic uppercase">Prêt à hacker <br />votre croissance ?</h2>
+              <h2 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-8 tracking-tighter leading-none italic uppercase">Donnez vie à vos projets.</h2>
               <p className="text-slate-400 text-lg mb-12 leading-relaxed max-w-md">
-                Nos experts IT sont prêts à auditer vos infrastructures et à designer votre futur architecture Cloud.
+                Discutez avec nos experts et concevons ensemble les infrastructures, applications et compétences numériques adaptées à votre croissance.
               </p>
               <Link
                 to="/contact"
                 className="bg-blue-600 text-white px-12 py-5 rounded-full font-black text-lg hover:bg-blue-500 transition-all inline-flex items-center gap-4 shadow-2xl shadow-blue-900/50"
               >
-                Démarrer le projet
+                Démarrer un projet
                 <ArrowRight className="w-6 h-6" />
               </Link>
             </div>
             <div className="hidden lg:grid grid-cols-2 gap-4">
                {[
-                 { t: 'Dakar Services', c: 'bg-green-500' },
-                 { t: 'CloudNodes', c: 'bg-blue-500' },
-                 { t: 'DevHub Africa', c: 'bg-purple-500' },
-                 { t: 'SecurePulse', c: 'bg-orange-500' },
+                 { t: 'YOU KNOW TECH', c: 'bg-blue-500' },
+                 { t: 'SASTOCK SAAS', c: 'bg-green-500' },
+                 { t: 'FORMATIONS EN LIGNE', c: 'bg-indigo-500' },
+                 { t: 'TRANSFORMATION IA', c: 'bg-purple-500' },
                ].map((item, i) => (
                  <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3">
                    <span className={`w-2 h-2 ${item.c} rounded-full animate-pulse`}></span>

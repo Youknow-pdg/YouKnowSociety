@@ -1,45 +1,45 @@
 import { motion } from 'motion/react';
-import { Layout, Cloud, Shield, Headphones, Lightbulb, Code, Terminal, Server, Database, Lock, Search, Smartphone } from 'lucide-react';
+import { Layout, Cloud, Shield, Headphones, Lightbulb, Code, Terminal, Server, Database, Lock, Search, Smartphone, Brain, PenTool, Camera, Wrench, BookOpen, UserCheck } from 'lucide-react';
 
 const serviceCategories = [
   {
-    hero: 'Développement Logiciel',
+    hero: 'Développement Web & Logiciel',
     icon: Code,
-    desc: 'Conception et réalisation de solutions applicatives performantes et évolutives.',
+    desc: 'Nous concevons des plateformes web et des logiciels sur mesure, performants et intuitifs, adaptés à vos besoins opérationnels.',
     items: [
-      { t: 'Applications Web', d: 'React, Vue, Node.js, architectures modernes.', i: Layout },
-      { t: 'Apps Mobiles', d: 'iOS, Android via React Native ou Flutter.', i: Smartphone },
-      { t: 'SaaS & Plateformes', d: 'Solutions multi-tenants évolutives.', i: Database },
+      { t: 'Sites Web Vitrines & E-commerce', d: 'Développement de sites professionnels et boutiques en ligne élégantes.', i: Layout },
+      { t: 'Applications Web & Mobiles', d: 'Développement d\'applications performantes pour navigateurs et smartphones.', i: Smartphone },
+      { t: 'Logiciels SaaS', d: 'Conception de solutions cloud multi-utilisateurs comme notre logiciel SASTOCK.', i: Database },
     ],
   },
   {
-    hero: 'Infrastructure & Cloud',
-    icon: Cloud,
-    desc: 'Hébergement haute disponibilité et gestion optimisée de vos ressources.',
+    hero: 'Intelligence Artificielle & Automatisation',
+    icon: Brain,
+    desc: 'Propulsez votre productivité au niveau supérieur grâce à l\'intégration intelligente d\'outils IA et à l\'automatisation de vos flux de travail.',
     items: [
-      { t: 'Migration Cloud', d: 'AWS, Azure, Google Cloud Platform.', i: Server },
-      { t: 'DevOps & CI/CD', d: 'Automatisation des déploiements.', i: Terminal },
-      { t: 'Virtualisation', d: 'Gestion de serveurs et conteneurs (Docker).', i: Database },
+      { t: 'Intégration d\'IA Générative', d: 'Mise en œuvre des meilleurs modèles d\'IA pour vos processus d\'entreprise.', i: Brain },
+      { t: 'Automatisation de Tâches', d: 'Conception de workflows automatiques pour éliminer les tâches répétitives.', i: Terminal },
+      { t: 'Conseil en Outils IA', d: 'Audit et recommandation des meilleures solutions IA du marché.', i: Lightbulb },
     ],
   },
   {
-    hero: 'Cybersécurité',
-    icon: Shield,
-    desc: 'Protection proactive de vos actifs numériques et conformité.',
+    hero: 'Identité Visuelle & Multimédia',
+    icon: PenTool,
+    desc: 'Donnez une image forte, cohérente et mémorable à votre marque grâce à nos services de création visuelle et de montage vidéo.',
     items: [
-      { t: 'Audits de Sécurité', d: 'Tests d\'intrusion et analyses de vulnérabilité.', i: Search },
-      { t: 'Gouvernance & Risques', d: 'Conformité RGPD et normes ISO.', i: Lock },
-      { t: 'Protection Réseau', d: 'Pare-feux, WAF et monitoring SOC.', i: Shield },
+      { t: 'Création d\'Identités Visuelles', d: 'Conception de logos professionnels, chartes graphiques et supports de marque.', i: PenTool },
+      { t: 'Affiches & Supports Publicitaires', d: 'Création de visuels de communication percutants pour vos campagnes.', i: Layout },
+      { t: 'Montage Vidéo & Voix Off', d: 'Réalisation de vidéos promotionnelles rythmées avec voix off professionnelles.', i: Camera },
     ],
   },
   {
-    hero: 'Support & Conseil',
-    icon: Lightbulb,
-    desc: 'Accompagnement stratégique et assistance technique continue.',
+    hero: 'Maintenance, OS & Support Technique',
+    icon: Wrench,
+    desc: 'Gardez vos équipements informatiques performants et sécurisés en toutes circonstances grâce à notre équipe technique.',
     items: [
-      { t: 'Support 24/7', d: 'Assistance technique pour vos utilisateurs.', i: Headphones },
-      { t: 'Stratégie Digitale', d: 'Expertise pour votre transformation.', i: Lightbulb },
-      { t: 'Tierce Maintenance', d: 'Maintenance corrective et évolutive.', i: Terminal },
+      { t: 'Installation de Systèmes', d: 'Configuration complète et sécurisée d\'environnements Windows et Linux.', i: Server },
+      { t: 'Maintenance & Nettoyage', d: 'Nettoyage complet physique et logiciel de vos ordinateurs.', i: Wrench },
+      { t: 'Support Technique & Projets', d: 'Assistance technique continue et accompagnement de vos projets numériques.', i: Headphones },
     ],
   },
 ];
