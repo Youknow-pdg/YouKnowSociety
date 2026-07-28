@@ -1,6 +1,6 @@
 {
-  "name": "YOUKNOW",
-  "description": "Groupe informatique leader proposant des services technologiques complets : développement, infrastructure, cybersécurité et support.",
+  "name": "YOU KNOW SOCIETY",
+  "description": "Groupe holding technologique international spécialisé dans le numérique, l'innovation, la formation, le développement technologique et la transformation digitale.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
