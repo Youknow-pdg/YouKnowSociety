@@ -244,11 +244,11 @@ export default function Contact() {
            />
            <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay"></div>
            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-             <div className="p-12 glass-card bg-slate-900/80 rounded-[3rem] text-center space-y-6 max-w-sm border-white/10 shadow-3xl pointer-events-auto">
+             <div className="p-12 glass-card bg-slate-900/80 rounded-[3rem] text-center space-y-6 max-w-md border-white/10 shadow-3xl pointer-events-auto">
                 <Globe size={48} className="text-blue-500 mx-auto animate-spin-slow" />
-                <h3 className="font-black text-2xl uppercase italic text-white tracking-widest leading-none">Réseau<br/>Afrique</h3>
+                <h3 className="font-black text-2xl uppercase italic text-white tracking-widest leading-none">Réseau<br/>International</h3>
                 <p className="text-slate-400 text-xs font-bold leading-relaxed uppercase tracking-widest">
-                  Points de présence critiques : Sénégal, Côte d'Ivoire, Bénin, Togo, Mali.
+                  Présence & portée globale : Sénégal, Afrique et dans tous les pays du monde.
                 </p>
              </div>
            </div>

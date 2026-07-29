@@ -21,7 +21,7 @@ const subsidiaries = [
   {
     name: 'YOU KNOW EDUCATION',
     sector: 'Savoir & Formations Numériques (En projet)',
-    desc: 'Unité stratégique en cours de structuration pour centraliser l\'ensemble de nos formations pratiques en ligne et hybrides à travers l\'Afrique.',
+    desc: 'Unité stratégique en cours de structuration pour centraliser l\'ensemble de nos formations pratiques en ligne et hybrides à travers l\'Afrique et dans le monde entier.',
     icon: BookOpen,
     color: 'bg-indigo-500',
     link: '#',
