@@ -14,6 +14,7 @@ const navLinks = [
   { name: 'À propos', path: '/about' },
   { name: 'Services', path: '/services' },
   { name: 'Filiales (18)', path: '/subsidiaries' },
+  { name: 'Partenaires', path: '/partners' },
   { name: 'Études de cas', path: '/cases' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -66,6 +67,11 @@ export default function Navbar() {
       category: p.badge,
       link: '/subsidiaries'
     })),
+    { title: 'Feselma Digital - Agence Digitale (feselmadigital.com)', category: 'Partenaire Officiel', link: '/partners' },
+    { title: 'SDM - Services Digitaux & Maintenance IT', category: 'Partenaire Officiel', link: '/partners' },
+    { title: 'Merveille Bat - Construction & Gestion Locative', category: 'Partenaire Officiel', link: '/partners' },
+    { title: 'AutoLink - Vente de voitures (Géré par YOU KNOW)', category: 'Plateforme Groupe', link: '/partners' },
+    { title: 'Miss Drone Company - Imagerie Aérienne & Drones HD', category: 'Partenaire Officiel', link: '/partners' },
     { title: 'Formation Informatique Bureautique (Word, Excel, PowerPoint, Access)', category: 'YOU KNOW ACADEMY', link: '/services' },
     { title: 'Formation IA & Création de Sites Web', category: 'YOU KNOW ACADEMY', link: '/services' },
     { title: 'Contacter l\'Équipe YOU KNOW (+221 70 200 72 85)', category: 'Contact Direct', link: '/contact' },

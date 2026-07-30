@@ -55,6 +55,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: 'À propos de YOU KNOW SOCIETY', path: '/about' },
+                { name: 'Écosystème & Partenaires (Feselma, SDM...)', path: '/partners' },
                 { name: 'YOU KNOW TECH (SaaS & IA)', path: '/subsidiaries' },
                 { name: 'YOU KNOW COMMERCE & FINANCE', path: '/subsidiaries' },
                 { name: 'YOU KNOW EDUCATION', path: '/subsidiaries' },

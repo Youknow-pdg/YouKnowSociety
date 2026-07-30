@@ -10,6 +10,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Subsidiaries from './pages/Subsidiaries';
 import CaseStudies from './pages/CaseStudies';
+import Partners from './pages/Partners';
 import Contact from './pages/Contact';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/subsidiaries" element={<Subsidiaries />} />
+          <Route path="/partners" element={<Partners />} />
           <Route path="/cases" element={<CaseStudies />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
