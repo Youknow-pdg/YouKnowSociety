@@ -71,15 +71,18 @@ YOU KNOW SOCIETY accompagne les particuliers, les entreprises et les organisatio
 
 ---
 
-### Nos formations (100% en ligne)
-Nous proposons des formations pratiques, en ligne, où les apprenants réalisent des projets concrets.
-- **Domaines de formation** : Intelligence artificielle, Création de sites web avec l'IA, Création d'affiches avec l'IA, Automatisation grâce à l'IA, Utilisation des meilleurs outils IA, Informatique bureautique, Développement web, etc.
-- **Modalités** :
-  - Formation 100 % en ligne
-  - Durée : 15 jours
-  - Rythme : 3 jours par semaine
+### Nos formations & YOU KNOW ACADEMY
+Nous proposons des formations pratiques, en ligne et hybrides, où les apprenants réalisent des projets concrets sous la bannière **YOU KNOW ACADEMY** (*Apprendre • Maîtriser • Réussir*).
+- **Domaines de formation** :
+  - **Formation en Informatique Bureautique** : Maîtrise complète de Word (traitement de texte), Excel (tableaux de calcul), PowerPoint (présentations professionnelles), Access (bases de données), Outlook (gestion des emails) et Windows (gestion de fichiers et organisation). 100% pratique, durée de 3 semaines (flexible), attestation/certificat de formation à la clé.
+  - **Formations IA & Tech** : Intelligence artificielle, Création de sites web avec l'IA, Création d'affiches avec l'IA, Automatisation grâce à l'IA, Utilisation des meilleurs outils IA, Développement web.
+- **Modalités générales** :
+  - Formations 100 % en ligne et pratiques avec suivi personnalisé
+  - Durée : 15 jours à 3 semaines selon la formation
+  - Rythme : 3 jours par semaine (flexible)
   - Frais d'inscription : 5 000 FCFA
   - Coût par cours : 1 475 FCFA
+  - Attestation / Certificat à la clé
 
 ---
 

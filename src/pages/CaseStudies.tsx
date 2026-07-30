@@ -1,128 +1,123 @@
 import { motion } from 'motion/react';
-import { CheckCircle2, TrendingUp, Clock, Target, ArrowRight } from 'lucide-react';
+import { CheckCircle2, TrendingUp, Target, Sparkles, FolderKanban } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const cases = [
   {
-    title: 'Modernisation Bancaire',
-    client: 'FinBank SA',
-    desc: 'Migration complète de l\'infrastructure on-premise vers un cloud hybride sécurisé.',
-    problem: 'Lenteur des transactions et vulnérabilités de sécurité accrues.',
-    solution: 'Architecture micro-services et déploiement d\'un WAF robuste.',
-    result: 'Disponibilité de 99.99% et réduction de 40% des coûts d\'exploitation.',
+    title: 'Digitalisation & SaaS SASTOCK',
+    client: 'Réseau de Commerçants & PME',
+    desc: 'Déploiement du logiciel SaaS SASTOCK pour le contrôle des stocks en temps réel et le suivi des bénéfices commercial.',
+    problem: 'Gestion manuelle du stock sujette aux erreurs et ruptures fréquentes.',
+    solution: 'Plateforme SaaS cloud intuitive avec tableaux de bord et alertes de rupture.',
+    result: 'Visibilité totale du stock et croissance mesurée des bénéfices.',
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Cloud', 'Finance', 'Security'],
+    tags: ['SaaS', 'SASTOCK', 'Commerce'],
   },
   {
-    title: 'Plateforme E-Gov',
-    client: 'Ministère du Numérique',
-    desc: 'Développement d\'une plateforme centralisée pour les services citoyens.',
-    problem: 'Processus administratifs papier longs et inefficaces.',
-    solution: 'Portail mobile-first avec authentification biométrique.',
-    result: 'Plus de 2 millions d\'utilisateurs actifs en 6 mois.',
+    title: 'Formation IT & Bureautique 100% Pratique',
+    client: 'YOU KNOW ACADEMY',
+    desc: 'Structure et déploiement de cursus certifiants en bureautique, IA et développement web.',
+    problem: 'Manque de formations concrètes orientées projets pratiques sur le marché.',
+    solution: 'Parcours hybrides de 3 semaines avec projets hebdomadaires et suivi personnalisé.',
+    result: 'Certifications délivrées et forte employabilité des talents formés.',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Public Sector', 'Web App', 'UX'],
+    tags: ['Éducation', 'Bureautique', 'IA'],
   },
   {
-    title: 'Supply Chain Optima',
-    client: 'LogiTrans Group',
-    desc: 'Outil de suivi en temps réel des flottes logistiques africaines.',
-    problem: 'Manque de visibilité sur le transit des marchandises.',
-    solution: 'Intégration IoT et tableau de bord prédictif via IA.',
-    result: 'Optimisation de 25% du temps de livraison moyen.',
+    title: 'Transformation Digitale & Identité Visuelle',
+    client: 'Entreprises & Institutions',
+    desc: 'Refonte complète de marques, création de chartes graphiques, voix off et sites d\'entreprise.',
+    problem: 'Images de marque vieillissantes et faible présence sur le canal numérique.',
+    solution: 'Création d\'identités visuelles modernes, vidéos rythmées et sites web haute performance.',
+    result: 'Augmentation de la notoriété et acquisition de nouveaux partenaires.',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop',
-    tags: ['IoT', 'AI', 'Logistics'],
+    tags: ['Branding', 'Design IA', 'Web'],
   },
 ];
 
 export default function CaseStudies() {
   return (
     <div className="pb-32">
-       {/* Header */}
-       <section className="py-24 max-w-7xl mx-auto px-6 border-b border-white/5 technical-grid">
-        {/* Floating icons */}
-        <motion.div 
-          animate={{ y: [0, -20, 0], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 6, repeat: Infinity }}
-          className="absolute top-10 right-20 text-blue-500/10 pointer-events-none"
-        >
-          <TrendingUp size={150} />
-        </motion.div>
-        <motion.div 
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-20 -left-10 text-indigo-500/10 pointer-events-none"
-        >
-          <Clock size={200} />
-        </motion.div>
-
-        <h1 className="text-[10px] uppercase tracking-[0.6em] font-black text-blue-500 mb-6">Impact & Résultats</h1>
-        <h2 className="text-6xl lg:text-9xl font-black text-white tracking-tighter leading-none mb-10 uppercase italic">
-          Histoires de <br /> <span className="text-gradient">réussites</span> clients.
-        </h2>
-        <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
-          Découvrez comment nous aidons nos partenaires à surmonter leurs défis technologiques avec des solutions innovantes et concrètes.
-        </p>
+      {/* Header */}
+      <section className="py-20 lg:py-28 border-b border-white/10 relative technical-grid overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-3xl mx-auto space-y-4"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-mono font-bold uppercase tracking-widest">
+              <FolderKanban size={14} /> RÉALISATIONS & IMPACT CONCRET
+            </div>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight">
+              Projets Réalisés <span className="text-gradient">& Témoignages</span>
+            </h1>
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+              Découvrez comment YOU KNOW SOCIETY et ses filiales accompagnent concrètement les particuliers, PME et institutions vers l'excellence numérique.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Cases */}
-      <div className="max-w-7xl mx-auto px-6 space-y-32 mt-20">
+      <div className="max-w-7xl mx-auto px-6 space-y-24 mt-20">
         {cases.map((c, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`flex flex-col lg:flex-row gap-20 items-center ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+            className="glass-card p-8 lg:p-12 border-white/10 bg-slate-900/60 rounded-[2.5rem]"
           >
-            <div className="lg:w-1/2">
-              <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl glass-card p-2 border-white/10 group">
+            <div className="grid lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-5 relative aspect-video rounded-2xl overflow-hidden border border-white/10 group">
                 <img 
                   src={c.image} 
                   alt={c.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 rounded-[2.5rem]" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70" 
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-8 left-8 flex gap-2">
+                <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                   {c.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-blue-600/20 backdrop-blur-md border border-blue-500/30 rounded-full text-[10px] font-black uppercase text-blue-400 tracking-widest whitespace-nowrap">
+                    <span key={tag} className="px-2.5 py-1 bg-slate-950/80 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-mono font-bold text-blue-400">
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
 
-            <div className="lg:w-1/2 space-y-10">
-              <div>
-                <div className="text-blue-500 font-black mb-2 uppercase tracking-[0.4em] text-[10px] italic">{c.client}</div>
-                <h3 className="text-5xl font-black text-white mb-8 leading-none uppercase italic tracking-tighter">{c.title}</h3>
-                <p className="text-slate-400 text-xl leading-relaxed italic border-l-4 border-blue-500/20 pl-8 mb-10">
-                  "{c.desc}"
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-white font-black uppercase tracking-widest text-xs">
-                    <Target size={18} className="text-blue-500" /> Défi
-                  </div>
-                  <p className="text-slate-500 text-sm leading-relaxed">{c.problem}</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-white font-black uppercase tracking-widest text-xs">
-                    <CheckCircle2 size={18} className="text-blue-400" /> Solution
-                  </div>
-                  <p className="text-slate-500 text-sm leading-relaxed">{c.solution}</p>
-                </div>
-              </div>
-
-              <div className="glass-card p-10 bg-blue-600/5 border-white/5 flex items-center justify-between group cursor-help">
+              <div className="lg:col-span-7 space-y-6">
                 <div>
-                  <div className="text-[10px] text-slate-500 uppercase font-black tracking-[0.3em] mb-2">Impact Mesuré</div>
-                  <div className="text-3xl font-black text-white italic uppercase tracking-tighter">{c.result}</div>
+                  <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">{c.client}</span>
+                  <h2 className="text-2xl sm:text-4xl font-display font-bold text-white mt-1 mb-3">{c.title}</h2>
+                  <p className="text-slate-300 text-sm leading-relaxed italic border-l-2 border-blue-500/40 pl-4">
+                    "{c.desc}"
+                  </p>
                 </div>
-                <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-blue-500 shadow-xl group-hover:bg-blue-600 group-hover:text-white transition-all">
-                  <TrendingUp size={28} />
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-1">
+                    <div className="flex items-center gap-2 text-white font-bold text-xs uppercase tracking-wider">
+                      <Target size={14} className="text-blue-400" /> Problématique
+                    </div>
+                    <p className="text-slate-400 text-xs leading-relaxed">{c.problem}</p>
+                  </div>
+                  <div className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-1">
+                    <div className="flex items-center gap-2 text-white font-bold text-xs uppercase tracking-wider">
+                      <CheckCircle2 size={14} className="text-emerald-400" /> Solution Apportée
+                    </div>
+                    <p className="text-slate-400 text-xs leading-relaxed">{c.solution}</p>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-blue-950/30 border border-blue-500/20 flex items-center justify-between">
+                  <div>
+                    <span className="text-[10px] font-mono text-blue-400 uppercase font-bold">Résultat Mesuré</span>
+                    <p className="text-sm font-bold text-white font-display mt-0.5">{c.result}</p>
+                  </div>
+                  <div className="w-10 h-10 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center border border-blue-500/30">
+                    <TrendingUp size={20} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,29 +125,29 @@ export default function CaseStudies() {
         ))}
       </div>
 
-      {/* Trust Section */}
-      <section className="mt-40">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="glass-card p-24 text-center border-white/5 bg-slate-900/40 relative overflow-hidden">
-            <motion.div 
-              animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-              transition={{ duration: 10, repeat: Infinity }}
-              className="absolute inset-0 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"
-            />
-            <h2 className="text-slate-500 text-[10px] uppercase font-black tracking-[0.8em] mb-16 relative z-10">NETWORK_TRUST</h2>
-            <div className="flex flex-wrap justify-center gap-16 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 relative z-10">
-              {['TechCorp', 'InnoVentures', 'GlobalLogistics', 'FinanceOne'].map(logo => (
-                <div key={logo} className="text-white font-black text-3xl tracking-tighter uppercase italic hover:text-blue-500 cursor-default">
-                  {logo}
-                </div>
-              ))}
-            </div>
-            <p className="text-slate-500 mt-20 text-xs italic uppercase tracking-[0.4em] font-black">
-              Rejoignez les leaders qui ont choisi l'excellence avec YOUKNOW.
-            </p>
+      {/* CTA Box */}
+      <section className="max-w-7xl mx-auto px-6 mt-28">
+        <div className="glass-card p-8 lg:p-16 text-center border-white/10 bg-slate-950/80 rounded-[2.5rem] space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-xs font-mono font-bold uppercase tracking-widest">
+            <Sparkles size={14} /> VOTRE PROJET NUMÉRIQUE
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white">
+            Prêt à transformer vos idées en <span className="text-gradient">succès technologique</span> ?
+          </h2>
+          <p className="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
+            Contactez l'équipe YOU KNOW SOCIETY pour échanger sur vos besoins et recevoir un accompagnement personnalisé.
+          </p>
+          <div className="pt-4">
+            <Link
+              to="/contact"
+              className="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg shadow-blue-600/30 transition-all"
+            >
+              Initier un Projet avec le Groupe
+            </Link>
           </div>
         </div>
       </section>
     </div>
   );
 }
+

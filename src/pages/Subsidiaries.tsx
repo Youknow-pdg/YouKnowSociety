@@ -1,158 +1,251 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ExternalLink, ShoppingBag, Terminal, Globe, Shield, Smartphone, Box, BookOpen, Landmark, Car } from 'lucide-react';
+import { 
+  Building2, ArrowRight, Check, Search, Filter, Sparkles, Layers,
+  ChevronRight, ExternalLink, Zap, Shield, Database, Award
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { allSubsidiaries, groupProducts, Subsidiary } from '../data/subsidiariesData';
 
-const subsidiaries = [
-  {
-    name: 'YOU KNOW TECH',
-    sector: 'Développement, IA & SaaS (Actif)',
-    desc: 'Cœur technologique spécialisé en développement logiciel, applications web/mobiles, intégration d\'intelligence artificielle et solutions SaaS innovantes comme SASTOCK.',
-    icon: Terminal,
-    color: 'bg-blue-600',
-    link: '#',
-  },
-  {
-    name: 'YOU KNOW COMMERCE & FINANCE',
-    sector: 'Commerce & Solutions Financières (En projet)',
-    desc: 'Future filiale dédiée à la numérisation du commerce, aux micro-transactions, aux passerelles de paiement locales et à la gestion financière moderne.',
-    icon: ShoppingBag,
-    color: 'bg-indigo-600',
-    link: '#',
-  },
-  {
-    name: 'YOU KNOW EDUCATION',
-    sector: 'Savoir & Formations Numériques (En projet)',
-    desc: 'Unité stratégique en cours de structuration pour centraliser l\'ensemble de nos formations pratiques en ligne et hybrides à travers l\'Afrique et dans le monde entier.',
-    icon: BookOpen,
-    color: 'bg-indigo-500',
-    link: '#',
-  },
-  {
-    name: 'YOU KNOW AUTO & MOBILITÉ',
-    sector: 'Industrie Automobile & Transport (En projet)',
-    desc: 'Division prospective explorant l\'intégration du numérique dans l\'automobile, les systèmes de transport intelligents et la mobilité connectée.',
-    icon: Car,
-    color: 'bg-slate-800',
-    link: '#',
-  },
-];
+const categories = [
+  'Toutes (18)',
+  'Tech & Digital',
+  'Design & Média',
+  'Finance & Commerce',
+  'Industrie & Énergie',
+  'Services & Société',
+  'Transport & Auto'
+] as const;
 
 export default function Subsidiaries() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('Toutes (18)');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  const filteredSubsidiaries = allSubsidiaries.filter(sub => {
+    const matchesCategory = selectedCategory === 'Toutes (18)' || sub.category === selectedCategory;
+    const matchesSearch = searchQuery(sub, searchTerm);
+    return matchesCategory && matchesSearch;
+  });
+
+  function searchQuery(sub: Subsidiary, query: string): boolean {
+    if (!query.trim()) return true;
+    const q = query.toLowerCase();
+    return (
+      sub.name.toLowerCase().includes(q) ||
+      sub.sector.toLowerCase().includes(q) ||
+      sub.desc.toLowerCase().includes(q) ||
+      sub.highlights.some(h => h.toLowerCase().includes(q))
+    );
+  }
+
   return (
     <div className="pb-32">
       {/* Header */}
-      <section className="py-32 text-center overflow-hidden relative border-b border-white/5 technical-grid">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <section className="py-20 lg:py-28 border-b border-white/10 relative technical-grid overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 space-y-6">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl mx-auto space-y-4"
           >
-            <h1 className="text-[10px] uppercase tracking-[0.6em] font-black text-blue-500 mb-8">Un Groupe, Plusieurs Expertises</h1>
-            <h2 className="text-6xl lg:text-9xl font-black text-white tracking-tighter uppercase mb-8 leading-none italic">
-              Nos <span className="text-gradient">Filiales</span>
-            </h2>
-            <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed italic">
-              "L'union de nos talents au service de votre ambition technologique."
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-mono font-bold uppercase tracking-widest">
+              <Building2 size={14} /> GROUPE HOLDING YOU KNOW SOCIETY
+            </div>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight">
+              Les <span className="text-gradient">18 Filiales</span> du Groupe
+            </h1>
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+              YOU KNOW SOCIETY est une société holding sénégalaise structurée en 18 filiales spécialisées et autonomes, créant un écosystème synergique pour transformer l'Afrique et le monde.
             </p>
           </motion.div>
+
+          {/* Search & Filter Controls */}
+          <div className="max-w-4xl mx-auto pt-6 space-y-4">
+            <div className="relative">
+              <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Rechercher une filiale (ex: SASTOCK, IA, Finance, Auto, Archi...)"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full bg-slate-900/90 border border-white/15 rounded-2xl py-3.5 pl-12 pr-4 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/60 transition-all"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-mono text-slate-400 hover:text-white"
+                >
+                  Effacer
+                </button>
+              )}
+            </div>
+
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-mono font-bold transition-all ${
+                    selectedCategory === cat
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30 border border-blue-400'
+                      : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:border-white/20'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Grid */}
-      <div className="max-w-7xl mx-auto px-6 -mt-16 relative z-20">
-        <div className="grid md:grid-cols-2 gap-10">
-          {subsidiaries.map((sub, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="glass-card p-10 border-white/5 hover:bg-white/10 transition-all group overflow-hidden relative"
+      {/* Subsidiaries Grid */}
+      <div className="max-w-7xl mx-auto px-6 mt-16">
+        <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+          <span className="text-xs font-mono text-slate-400 uppercase tracking-widest font-bold">
+            Affichage de {filteredSubsidiaries.length} filiale(s) sur 18
+          </span>
+          <span className="text-xs font-mono text-blue-400 font-bold">
+            Holding : YOU KNOW SOCIETY
+          </span>
+        </div>
+
+        {filteredSubsidiaries.length === 0 ? (
+          <div className="text-center py-20 glass-card bg-slate-900/40 rounded-3xl border border-white/10">
+            <p className="text-slate-300 text-base">Aucune filiale ne correspond à votre recherche "{searchTerm}".</p>
+            <button
+              onClick={() => { setSearchTerm(''); setSelectedCategory('Toutes (18)'); }}
+              className="mt-4 text-xs font-mono font-bold text-blue-400 hover:underline"
             >
-              <div className="flex flex-col h-full space-y-8 relative z-10">
-                <div className="flex justify-between items-start">
-                  <div className={`w-16 h-16 ${sub.color} text-white rounded-3xl flex items-center justify-center shadow-2xl ${sub.color === 'bg-blue-600' ? 'shadow-blue-600/30' : 'shadow-slate-900/40'}`}>
-                    <sub.icon size={32} />
+              Réinitialiser la recherche
+            </button>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredSubsidiaries.map((sub, idx) => (
+              <motion.div
+                key={sub.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 6) * 0.05 }}
+                className="glass-card p-6 border-white/10 hover:border-blue-500/40 transition-all bg-slate-900/60 flex flex-col justify-between group relative overflow-hidden rounded-3xl"
+              >
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${sub.color} text-white rounded-2xl flex items-center justify-center shadow-lg border border-white/20 shrink-0`}>
+                      <sub.icon size={22} />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-[10px] font-mono font-bold text-slate-400">FILIALE #{sub.number}</span>
+                      <span className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold uppercase border ${sub.tagColor}`}>
+                        {sub.status}
+                      </span>
+                    </div>
                   </div>
-                  <a 
-                    href={sub.link} 
-                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all shadow-xl"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                </div>
-                
-                <div>
-                  <h3 className="text-3xl font-black text-white tracking-tight uppercase mb-2 italic">{sub.name}</h3>
-                  <div className="inline-block px-3 py-1 bg-white/5 text-blue-400 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10 mb-6 italic">
-                    {sub.sector}
+
+                  <div>
+                    <h2 className="text-xl font-display font-extrabold text-white group-hover:text-blue-300 transition-colors">
+                      {sub.name}
+                    </h2>
+                    <span className="text-[11px] font-mono text-blue-400 font-bold block mb-2">{sub.sector}</span>
+                    <p className="text-slate-300 text-xs leading-relaxed line-clamp-3">
+                      {sub.desc}
+                    </p>
                   </div>
-                  <p className="text-slate-400 text-lg leading-relaxed">
-                    {sub.desc}
-                  </p>
+
+                  <div className="space-y-1.5 pt-3 border-t border-white/10">
+                    <span className="text-[9px] font-mono text-slate-400 uppercase font-bold tracking-wider">Compétences clés :</span>
+                    <div className="space-y-1">
+                      {sub.highlights.map((h, i) => (
+                        <div key={i} className="flex items-center gap-1.5 text-[11px] text-slate-300">
+                          <Check size={12} className="text-blue-400 shrink-0" />
+                          <span className="truncate">{h}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
-                <div className="pt-6 border-t border-white/5">
-                   <button className="text-blue-500 font-black text-[10px] uppercase tracking-[0.3em] flex items-center gap-2 group-hover:gap-4 transition-all">
-                      Découvrir la filiale <Box size={16} />
-                   </button>
+                <div className="pt-4 border-t border-white/10 mt-6 flex justify-between items-center">
+                  <span className="text-[10px] font-mono text-slate-500">{sub.category}</span>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-blue-400 group-hover:text-white transition-colors"
+                  >
+                    Nous contacter <ArrowRight size={12} />
+                  </Link>
                 </div>
-              </div>
-              
-              {/* Background text decoration */}
-              <div className="absolute -bottom-10 -right-10 text-[10rem] font-black text-white opacity-[0.02] select-none pointer-events-none uppercase italic group-hover:scale-110 transition-transform">
-                {sub.name.split(' ')[1]}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Visual Map/Schema Placeholder */}
-      <section className="max-w-7xl mx-auto px-6 mt-40">
-        <div className="glass-card p-12 lg:p-24 text-center border-white/5">
-          <h2 className="text-4xl lg:text-7xl font-black text-white mb-16 uppercase tracking-tighter italic">L'Écosystème <span className="text-gradient">YOUKNOW</span></h2>
-          
-          <div className="relative flex items-center justify-center min-h-[400px]">
-             {/* Central Node */}
-             <div className="z-20 w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center text-white font-black text-4xl shadow-[0_0_50px_rgba(37,99,235,0.4)] animate-pulse">
-               YOU<br/>KNOW
-             </div>
-             
-             {/* Satellite Nodes (Visual only) */}
-             <div className="hidden lg:block absolute inset-0">
-               {[
-                 { top: '10%', left: '20%', label: 'DEVELOPMENT' },
-                 { top: '15%', right: '20%', label: 'VIRTUALIZATION' },
-                 { bottom: '15%', left: '15%', label: 'SECURITY' },
-                 { bottom: '10%', right: '15%', label: 'STRATEGY' },
-                 { top: '50%', left: '5%', label: 'CLOUD' },
-                 { top: '50%', right: '5%', label: 'MOBILE' }
-               ].map((node, i) => (
-                 <motion.div 
-                  key={i}
-                  style={{ top: node.top, left: node.left, right: node.right }}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
-                  className="absolute p-6 glass-card bg-white/5 border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-slate-500"
-                 >
-                   {node.label}
-                 </motion.div>
-               ))}
-               
-               {/* SVG Lines Connector (simplified) */}
-               <svg className="absolute inset-0 w-full h-full -z-10 pointer-events-none opacity-10">
-                 <line x1="50%" y1="50%" x2="25%" y2="20%" stroke="#3b82f6" strokeWidth="1" strokeDasharray="5,5" />
-                 <line x1="50%" y1="50%" x2="75%" y2="25%" stroke="#3b82f6" strokeWidth="1" strokeDasharray="5,5" />
-                 <line x1="50%" y1="50%" x2="20%" y2="75%" stroke="#3b82f6" strokeWidth="1" strokeDasharray="5,5" />
-                 <line x1="50%" y1="50%" x2="80%" y2="85%" stroke="#3b82f6" strokeWidth="1" strokeDasharray="5,5" />
-               </svg>
-             </div>
+      {/* Featured Products of the Group */}
+      <section className="max-w-7xl mx-auto px-6 mt-28">
+        <div className="glass-card p-8 lg:p-12 border-white/10 bg-slate-950/80 rounded-[2.5rem] space-y-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-white/10">
+            <div>
+              <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">SOLUTIONS PHARES</span>
+              <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-white mt-1">
+                Produits Clés du Groupe YOU KNOW
+              </h2>
+            </div>
+            <p className="text-slate-400 text-xs max-w-md">
+              Chaque filiale développe des plateformes logicielles et des solutions concrètes pour accélérer la transition numérique.
+            </p>
           </div>
-          
-          <p className="mt-20 text-slate-500 max-w-xl mx-auto italic text-sm leading-relaxed uppercase tracking-widest font-black opacity-80">
-            Chaque filiale opère de manière autonome tout en bénéficiant de la force stratégique et opérationnelle centralisée de YOUKNOW.
-          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {groupProducts.map((prod, i) => (
+              <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 hover:border-blue-500/30 transition-all">
+                <div className="flex justify-between items-center">
+                  <div className="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-500/30 flex items-center justify-center">
+                    <prod.icon size={20} />
+                  </div>
+                  <span className="text-[9px] font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded font-bold">
+                    {prod.badge}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold font-display text-white">{prod.name}</h3>
+                <p className="text-xs italic text-blue-300">"{prod.slogan}"</p>
+                <p className="text-xs text-slate-300 leading-relaxed">{prod.desc}</p>
+                <span className="text-[10px] font-mono text-slate-500 block pt-2">Développé par : {prod.subsidiary}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ecosystem Architecture Visual */}
+      <section className="max-w-7xl mx-auto px-6 mt-20">
+        <div className="glass-card p-8 lg:p-12 border-white/10 bg-slate-900/60 rounded-[2.5rem] text-center space-y-8">
+          <div className="max-w-2xl mx-auto space-y-3">
+            <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">ARCHITECTURE DE HOLDING</span>
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white">
+              Une Vision Synergique & Mondiale
+            </h2>
+            <p className="text-slate-300 text-sm leading-relaxed">
+              YOU KNOW SOCIETY impulse la gouvernance, l'investissement technologique et l'excellence pour ses 18 filiales, afin de créer un impact durable en Afrique et dans le monde.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 pt-4">
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
+              <div className="text-2xl font-display font-bold text-blue-400">Gouvernance</div>
+              <p className="text-xs text-slate-400">Supervision stratégique et soutien transverse de la société holding.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
+              <div className="text-2xl font-display font-bold text-indigo-400">Synergie R&D</div>
+              <p className="text-xs text-slate-400">Partage des briques IA, cloud, design et de l'infrastructure commune.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
+              <div className="text-2xl font-display font-bold text-emerald-400">Impact Social</div>
+              <p className="text-xs text-slate-400">Pôle de formation YOU KNOW ACADEMY et création d'emplois qualifiés.</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
