@@ -27,9 +27,9 @@ export default function About() {
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
 
   return (
-    <div className="pb-32 overflow-hidden relative">
+    <div className="pb-32 overflow-hidden relative bg-slate-50 text-slate-900">
       {/* Hero */}
-      <section className="py-20 lg:py-28 border-b border-white/10 relative technical-grid">
+      <section className="py-20 lg:py-28 border-b border-slate-200 relative technical-grid bg-white">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
@@ -39,25 +39,25 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-7 space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-mono font-bold uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 border border-blue-200 rounded-full text-blue-800 text-xs font-mono font-bold uppercase tracking-widest">
                 <Building2 size={14} /> ADN DU GROUPE HOLDING
               </div>
               
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-tight">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-slate-900 tracking-tight leading-tight">
                 La force du savoir <br />
-                <span className="text-gradient">& de l'innovation.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700">& de l'innovation.</span>
               </h1>
 
-              <p className="text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
-                <strong className="text-white">YOU KNOW SOCIETY</strong> est un groupe holding technologique international spécialisé dans le numérique, l'innovation, la formation, le développement technologique et la transformation digitale. En tant que société mère, nous supervisons des filiales d'élite et préparons l'avenir numérique avec rigueur et vision.
+              <p className="text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
+                <strong className="text-slate-900 font-semibold">YOU KNOW SOCIETY</strong> est un groupe holding technologique international spécialisé dans le numérique, l'innovation, la formation, le développement technologique et la transformation digitale. En tant que société mère, nous supervisons des filiales d'élite et préparons l'avenir numérique avec rigueur et vision.
               </p>
 
-              <div className="pt-4 flex flex-wrap gap-6 text-xs font-mono text-slate-400">
-                <span className="flex items-center gap-2 text-white font-bold">
-                  <CheckCircle size={16} className="text-blue-400" /> Siège : Dakar, Sénégal
+              <div className="pt-4 flex flex-wrap gap-6 text-xs font-mono text-slate-600">
+                <span className="flex items-center gap-2 text-slate-900 font-bold">
+                  <CheckCircle size={16} className="text-blue-600" /> Siège : Dakar, Sénégal
                 </span>
-                <span className="flex items-center gap-2 text-white font-bold">
-                  <Globe2 size={16} className="text-emerald-400" /> Rayonnement : International
+                <span className="flex items-center gap-2 text-slate-900 font-bold">
+                  <Globe2 size={16} className="text-emerald-600" /> Rayonnement : International
                 </span>
               </div>
             </motion.div>
@@ -69,24 +69,24 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:col-span-5 relative"
             >
-              <div className="glass-card p-8 lg:p-10 border-white/10 bg-slate-900/80 rounded-[2.5rem] shadow-2xl relative space-y-6">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">Devise Officielle</span>
-                  <Sparkles size={18} className="text-amber-400" />
+              <div className="p-8 lg:p-10 border border-slate-200 bg-white rounded-[2.5rem] shadow-xl relative space-y-6">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <span className="text-xs font-mono font-bold text-blue-700 uppercase tracking-widest">Devise Officielle</span>
+                  <Sparkles size={18} className="text-amber-500" />
                 </div>
 
                 <div className="space-y-2">
-                  <div className="text-xl lg:text-2xl font-display font-bold text-white italic">
+                  <div className="text-xl lg:text-2xl font-display font-bold text-slate-900 italic">
                     "Where Knowledge Meets Innovation."
                   </div>
-                  <div className="text-sm text-slate-400">
+                  <div className="text-sm text-slate-600 font-medium">
                     Là où le savoir rencontre l'innovation pour créer l'avenir.
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/5 space-y-2">
-                  <div className="text-xs font-mono font-bold text-slate-300 uppercase">Impact & Portée</div>
-                  <p className="text-xs text-slate-400">
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                  <div className="text-xs font-mono font-bold text-slate-800 uppercase">Impact & Portée</div>
+                  <p className="text-xs text-slate-600 font-normal">
                     Accompagnement des entreprises, digitalisation des PME et formation certifiante des talents africains et internationaux.
                   </p>
                 </div>
@@ -104,15 +104,15 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 20 }}
             viewport={{ once: true }}
-            className="p-10 lg:p-12 glass-card border-white/10 bg-slate-900/60 flex flex-col justify-between hover:border-blue-500/40 transition-all"
+            className="p-10 lg:p-12 border border-slate-200 rounded-3xl bg-white shadow-md flex flex-col justify-between hover:border-blue-500 hover:shadow-xl transition-all"
           >
-            <div className="w-14 h-14 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center mb-8 border border-blue-500/30">
+            <div className="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center mb-8 border border-blue-200">
               <Target size={28} />
             </div>
             <div className="space-y-4">
-              <span className="text-xs font-mono text-blue-400 font-bold uppercase tracking-widest">Raison d'être</span>
-              <h2 className="text-3xl font-display font-bold text-white">Notre Mission</h2>
-              <p className="text-slate-300 leading-relaxed text-base">
+              <span className="text-xs font-mono text-blue-700 font-bold uppercase tracking-widest">Raison d'être</span>
+              <h2 className="text-3xl font-display font-bold text-slate-900">Notre Mission</h2>
+              <p className="text-slate-600 leading-relaxed text-base">
                 Aider les particuliers, les entreprises et les organisations à apprendre, créer, innover et réussir grâce aux technologies numériques.
               </p>
             </div>
@@ -123,15 +123,15 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-10 lg:p-12 glass-card bg-slate-900/60 border-white/10 text-white flex flex-col justify-between hover:border-indigo-500/40 transition-all"
+            className="p-10 lg:p-12 border border-slate-200 rounded-3xl bg-white shadow-md flex flex-col justify-between hover:border-indigo-500 hover:shadow-xl transition-all"
           >
-            <div className="w-14 h-14 bg-indigo-600/20 text-indigo-400 rounded-2xl flex items-center justify-center mb-8 border border-indigo-500/30">
+            <div className="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center mb-8 border border-indigo-200">
               <Eye size={28} />
             </div>
             <div className="space-y-4">
-              <span className="text-xs font-mono text-indigo-400 font-bold uppercase tracking-widest">Ambition Stratégique</span>
-              <h2 className="text-3xl font-display font-bold text-white">Notre Vision</h2>
-              <p className="text-slate-300 leading-relaxed text-base">
+              <span className="text-xs font-mono text-indigo-700 font-bold uppercase tracking-widest">Ambition Stratégique</span>
+              <h2 className="text-3xl font-display font-bold text-slate-900">Notre Vision</h2>
+              <p className="text-slate-600 leading-relaxed text-base">
                 Construire une société qui crée des solutions innovantes dans plusieurs secteurs d'activité afin d'avoir un impact positif au Sénégal, en Afrique et dans le monde entier.
               </p>
             </div>
@@ -141,13 +141,13 @@ export default function About() {
 
       {/* Meaning of "YOU KNOW" Interactive Acronym Decoder */}
       <section className="max-w-7xl mx-auto px-6 mt-28">
-        <div className="glass-card p-8 lg:p-16 border-white/10 bg-slate-950/80 rounded-[2.5rem]">
+        <div className="p-8 lg:p-16 border border-slate-200 bg-white rounded-[2.5rem] shadow-xl">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">SIGNIFICATION DU NOM</span>
-            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white">
-              Que signifie <span className="text-gradient">YOU KNOW</span> ?
+            <span className="text-xs font-mono font-bold text-blue-700 uppercase tracking-widest">SIGNIFICATION DU NOM</span>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900">
+              Que signifie <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">YOU KNOW</span> ?
             </h2>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-sm">
               Chaque lettre de notre acronyme porte une promesse fondamentale guidant l'excellence du groupe.
             </p>
           </div>
@@ -160,18 +160,18 @@ export default function About() {
                 onMouseLeave={() => setActiveLetter(null)}
                 className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
                   activeLetter === item.letter + i
-                    ? 'bg-blue-900/30 border-blue-500/60 shadow-lg shadow-blue-900/20 scale-[1.02]'
-                    : 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10'
+                    ? 'bg-blue-50 border-blue-500 shadow-md scale-[1.02]'
+                    : 'bg-slate-50 border-slate-200 hover:bg-slate-100 hover:border-slate-300'
                 }`}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-xl flex items-center justify-center font-mono font-bold text-2xl">
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-mono font-bold text-2xl shadow-sm">
                     {item.letter}
                   </div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase font-bold">{item.highlight}</span>
+                  <span className="text-[10px] font-mono text-slate-500 uppercase font-bold">{item.highlight}</span>
                 </div>
-                <h3 className="font-display font-bold text-white text-lg mb-2">{item.word}</h3>
-                <p className="text-slate-400 text-xs leading-relaxed">{item.meaning}</p>
+                <h3 className="font-display font-bold text-slate-900 text-lg mb-2">{item.word}</h3>
+                <p className="text-slate-600 text-xs leading-relaxed">{item.meaning}</p>
               </div>
             ))}
           </div>
@@ -181,8 +181,8 @@ export default function About() {
       {/* Values Grid */}
       <section className="max-w-7xl mx-auto px-6 mt-28">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">PILIERS & ÉTHIQUE</span>
-          <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white">
+          <span className="text-xs font-mono font-bold text-blue-700 uppercase tracking-widest">PILIERS & ÉTHIQUE</span>
+          <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900">
             Nos Valeurs Cardinales
           </h2>
         </div>
@@ -192,15 +192,15 @@ export default function About() {
             <motion.div
               key={i}
               whileHover={{ y: -4 }}
-              className="p-6 glass-card border-white/10 hover:border-blue-500/40 transition-all flex flex-col justify-between"
+              className="p-6 border border-slate-200 rounded-3xl bg-white hover:border-blue-500 hover:shadow-xl transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 bg-white/5 text-blue-400 rounded-xl flex items-center justify-center mb-6 border border-white/5">
+                <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-6 border border-blue-200">
                   <v.i size={24} />
                 </div>
-                <h3 className="text-lg font-bold text-white font-display mb-2">{v.t}</h3>
+                <h3 className="text-lg font-bold text-slate-900 font-display mb-2">{v.t}</h3>
               </div>
-              <p className="text-slate-400 text-xs leading-relaxed mt-2">{v.d}</p>
+              <p className="text-slate-600 text-xs leading-relaxed mt-2 font-normal">{v.d}</p>
             </motion.div>
           ))}
         </div>
@@ -208,11 +208,11 @@ export default function About() {
 
       {/* Why Choose Us */}
       <section className="max-w-7xl mx-auto px-6 mt-28">
-        <div className="glass-card p-8 lg:p-16 border-white/10 bg-slate-900/60 rounded-[2.5rem]">
+        <div className="p-8 lg:p-16 border border-slate-200 bg-white rounded-[2.5rem] shadow-xl">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">EXCELLENCE OPÉRATIONNELLE</span>
-            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white">
-              Pourquoi faire confiance à <span className="text-gradient">YOU KNOW SOCIETY</span> ?
+            <span className="text-xs font-mono font-bold text-blue-700 uppercase tracking-widest">EXCELLENCE OPÉRATIONNELLE</span>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900">
+              Pourquoi faire confiance à <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">YOU KNOW SOCIETY</span> ?
             </h2>
           </div>
 
@@ -225,13 +225,13 @@ export default function About() {
               { q: 'Une Approche Orientée Résultats', a: 'Des projets mesurables pour maximiser votre retour sur investissement.' },
               { q: 'Une Vision à Long Terme', a: 'Un accompagnement durable et une structuration du savoir pour bâtir l\'avenir.' },
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 flex gap-5 items-start">
-                <div className="w-10 h-10 bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded-xl flex items-center justify-center font-mono font-bold text-sm shrink-0">
+              <div key={i} className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex gap-5 items-start">
+                <div className="w-10 h-10 bg-blue-100 text-blue-700 border border-blue-200 rounded-xl flex items-center justify-center font-mono font-bold text-sm shrink-0">
                   0{i + 1}
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-white text-base mb-1">{item.q}</h3>
-                  <p className="text-slate-400 text-xs leading-relaxed">{item.a}</p>
+                  <h3 className="font-display font-bold text-slate-900 text-base mb-1">{item.q}</h3>
+                  <p className="text-slate-600 text-xs leading-relaxed">{item.a}</p>
                 </div>
               </div>
             ))}

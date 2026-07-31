@@ -36,12 +36,12 @@ const partnersList: Partner[] = [
     category: 'Agence Digitale & Médias',
     categoryGroup: 'tech',
     badge: 'Agence Digitale Partenaire',
-    badgeBg: 'bg-purple-500/10 border-purple-500/30 text-purple-300',
+    badgeBg: 'bg-purple-50 border-purple-200 text-purple-700 font-bold',
     websiteUrl: 'https://feselmadigital.com',
     description: 'Agence spécialisée en création digitale, stratégies de communication et développement d\'identités de marque. Feselma Digital concocte des plateformes web/mobiles modernes et du contenu média à fort impact.',
     detailedBio: 'Feselma Digital est une agence de référence dans l\'ingénierie créative et le développement numérique. Spécialisée dans la conception d\'identités visuelles percutantes, la création de contenus médias et le marketing digital orienté performance, l\'agence accompagne les entreprises dans leur présence en ligne.',
     accentColor: 'from-purple-600 via-indigo-600 to-pink-600',
-    gradientBg: 'from-purple-950/40 via-indigo-950/30 to-slate-950',
+    gradientBg: 'from-purple-50 via-indigo-50 to-slate-50',
     icon: Globe,
     services: [
       'Développement Web & Mobile sur mesure (React, Next, Applications)',
@@ -64,11 +64,11 @@ const partnersList: Partner[] = [
     category: 'Infrastructure IT & Maintenance',
     categoryGroup: 'tech',
     badge: 'Services IT & Maintenance',
-    badgeBg: 'bg-blue-500/10 border-blue-500/30 text-blue-300',
+    badgeBg: 'bg-blue-50 border-blue-200 text-blue-700 font-bold',
     description: 'Entreprise spécialisée dans les services numériques et la maintenance informatique. SDM propose des prestations d\'installation de systèmes d\'exploitation, de création de sites web et d\'optimisation de matériel informatique.',
     detailedBio: 'SDM (Services Digitaux & Maintenance) assure la performance et la viabilité des outils informatiques pour particuliers et professionnels. De la maintenance préventive/curative à la configuration de systèmes Windows et Linux, SDM offre un suivi technique fiable et adapté.',
     accentColor: 'from-blue-600 via-cyan-600 to-teal-600',
-    gradientBg: 'from-blue-950/40 via-cyan-950/30 to-slate-950',
+    gradientBg: 'from-blue-50 via-cyan-50 to-slate-50',
     icon: Wrench,
     services: [
       'Installation & Configuration Systèmes (Windows, Linux, Serveurs)',
@@ -91,11 +91,11 @@ const partnersList: Partner[] = [
     category: 'Immobilier & Construction',
     categoryGroup: 'btp',
     badge: 'Construction & Architecture',
-    badgeBg: 'bg-amber-500/10 border-amber-500/30 text-amber-300',
+    badgeBg: 'bg-amber-50 border-amber-200 text-amber-800 font-bold',
     description: 'Entreprise opérant dans le secteur du BTP, de la conception architecturale et de la gestion locative. Merveille Bat conçoit des projets immobiliers modernes et assure la gestion optimale de biens.',
     detailedBio: 'Merveille Bat est une référence dans la construction et l\'aménagement immobilier. L\'entreprise propose des services complets allant des plans d\'architecture 3D à la réalisation de travaux de construction, en passant par la gestion locative professionnelle de patrimoines immobiliers.',
     accentColor: 'from-amber-600 via-orange-600 to-yellow-600',
-    gradientBg: 'from-amber-950/40 via-orange-950/30 to-slate-950',
+    gradientBg: 'from-amber-50 via-orange-50 to-slate-50',
     icon: Building2,
     services: [
       'Construction de Bâtiments & Travaux BTP',
@@ -118,12 +118,12 @@ const partnersList: Partner[] = [
     category: 'Plateforme Automobile (Gérée par YOU KNOW)',
     categoryGroup: 'auto',
     badge: 'Gérée par YOU KNOW SOCIETY',
-    badgeBg: 'bg-red-500/10 border-red-500/30 text-red-300 font-bold',
+    badgeBg: 'bg-red-50 border-red-200 text-red-700 font-bold',
     managedByYouKnow: true,
     description: 'Plateforme de vente et d\'achat de véhicules automobiles développée et gérée directement par la société YOU KNOW SOCIETY. Une solution moderne pour simplifier le marché automobile.',
     detailedBio: 'AutoLink est la plateforme automobile officielle gérée par la société YOU KNOW. Elle met en relation vendeurs et acheteurs de véhicules, offre une vitrine claire d\'annonces automobiles et simplifie les démarches de transaction.',
     accentColor: 'from-red-600 via-rose-600 to-emerald-600',
-    gradientBg: 'from-red-950/40 via-rose-950/30 to-slate-950',
+    gradientBg: 'from-red-50 via-rose-50 to-slate-50',
     icon: Car,
     services: [
       'Plateforme d\'Annonces de Vente & Achat de Véhicules',
@@ -146,11 +146,11 @@ const partnersList: Partner[] = [
     category: 'Technologies Aériennes & Drones',
     categoryGroup: 'drone',
     badge: 'Prises de Vues Aériennes & Drones',
-    badgeBg: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300',
+    badgeBg: 'bg-emerald-50 border-emerald-200 text-emerald-800 font-bold',
     description: 'Entreprise spécialisée dans les services par drone, notamment les prises de vues aériennes haute définition, la cartographie topographique, la thermographie et la surveillance de sites.',
     detailedBio: 'Miss Drone Company met les technologies aériennes au service des entreprises et institutions. Équipée de drones de pointe et de pilotes expérimentés, l\'entreprise réalise des captations photo/vidéo 4K/8K, des relevés topographiques et des inspections techniques.',
     accentColor: 'from-emerald-600 via-teal-600 to-cyan-600',
-    gradientBg: 'from-emerald-950/40 via-teal-950/30 to-slate-950',
+    gradientBg: 'from-emerald-50 via-teal-50 to-slate-50',
     icon: Radio,
     services: [
       'Prises de Vues Aériennes 4K/8K (Photo & Vidéo)',
@@ -203,11 +203,11 @@ export default function Partners() {
   };
 
   return (
-    <div className="pt-24 sm:pt-28 pb-16 sm:pb-20 bg-slate-950 text-white min-h-screen relative overflow-x-hidden">
+    <div className="pt-24 sm:pt-28 pb-16 sm:pb-20 bg-slate-50 text-slate-900 min-h-screen relative overflow-x-hidden">
       
       {/* Background Animated Futuristic Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] sm:h-[400px] bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 blur-[100px] sm:blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/60 via-slate-50 to-slate-50 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] sm:h-[400px] bg-gradient-to-r from-blue-400/10 via-indigo-400/10 to-purple-400/10 blur-[100px] sm:blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 relative z-10">
         
@@ -216,9 +216,9 @@ export default function Partners() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest max-w-full leading-normal"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest max-w-full leading-normal shadow-sm"
           >
-            <Sparkles size={14} className="text-blue-400 shrink-0 animate-spin-slow" />
+            <Sparkles size={14} className="text-blue-600 shrink-0 animate-spin-slow" />
             <span className="truncate">ÉCOSYSTÈME STRATÉGIQUE YOU KNOW SOCIETY</span>
           </motion.div>
 
@@ -226,18 +226,18 @@ export default function Partners() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tight text-white leading-tight break-words px-1"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tight text-slate-900 leading-tight break-words px-1"
           >
-            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Partenaires</span> d'Excellence
+            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700">Partenaires</span> d'Excellence
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed px-1"
+            className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed px-1"
           >
-            Afin d'offrir des solutions 360° et à fort impact, <strong className="text-white">YOU KNOW SOCIETY</strong> s'associe à des leaders technologiques, agences médias, acteurs du BTP, plateformes de mobilité et experts de l'imagerie aérienne.
+            Afin d'offrir des solutions 360° et à fort impact, <strong className="text-slate-900">YOU KNOW SOCIETY</strong> s'associe à des leaders technologiques, agences médias, acteurs du BTP, plateformes de mobilité et experts de l'imagerie aérienne.
           </motion.p>
         </div>
 
@@ -249,18 +249,18 @@ export default function Partners() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-16"
         >
           {[
-            { label: 'Alliance Multi-Secteurs', val: '5+ Leaders', icon: Layers, color: 'text-blue-400' },
-            { label: 'Partenaire Web & Media', val: 'Feselma Digital', icon: Globe, color: 'text-purple-400' },
-            { label: 'Plateforme Auto Groupe', val: 'AutoLink SaaS', icon: Car, color: 'text-red-400' },
-            { label: 'Rayonnement & Impact', val: '100% Synergie', icon: Zap, color: 'text-emerald-400' }
+            { label: 'Alliance Multi-Secteurs', val: '5+ Leaders', icon: Layers, color: 'text-blue-600' },
+            { label: 'Partenaire Web & Media', val: 'Feselma Digital', icon: Globe, color: 'text-purple-600' },
+            { label: 'Plateforme Auto Groupe', val: 'AutoLink SaaS', icon: Car, color: 'text-red-600' },
+            { label: 'Rayonnement & Impact', val: '100% Synergie', icon: Zap, color: 'text-emerald-600' }
           ].map((stat, i) => (
-            <div key={i} className="p-3.5 sm:p-5 rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-xl flex items-center gap-3 shadow-lg min-w-0">
-              <div className="p-2.5 sm:p-3 rounded-xl bg-white/5 border border-white/10 shrink-0">
+            <div key={i} className="p-3.5 sm:p-5 rounded-2xl bg-white border border-slate-200/90 backdrop-blur-xl flex items-center gap-3 shadow-md shadow-slate-200/50 min-w-0">
+              <div className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200 shrink-0">
                 <stat.icon size={18} className={`${stat.color} sm:w-5 sm:h-5`} />
               </div>
               <div className="min-w-0 flex-1">
-                <div className="text-sm sm:text-base lg:text-lg font-display font-black text-white truncate">{stat.val}</div>
-                <div className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider font-bold truncate">{stat.label}</div>
+                <div className="text-sm sm:text-base lg:text-lg font-display font-black text-slate-900 truncate">{stat.val}</div>
+                <div className="text-[9px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider font-bold truncate">{stat.label}</div>
               </div>
             </div>
           ))}
@@ -282,11 +282,11 @@ export default function Partners() {
                 onClick={() => setSelectedFilter(tab.id as any)}
                 className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 sm:gap-2 border cursor-pointer max-w-full text-left sm:text-center ${
                   isActive 
-                    ? 'bg-blue-600 text-white border-blue-400 shadow-lg shadow-blue-600/30' 
-                    : 'bg-slate-900/80 text-slate-400 border-white/10 hover:border-white/20 hover:text-white'
+                    ? 'bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/20' 
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:text-slate-900 shadow-sm'
                 }`}
               >
-                <tab.icon size={13} className={`shrink-0 ${isActive ? 'text-white' : 'text-blue-400'}`} />
+                <tab.icon size={13} className={`shrink-0 ${isActive ? 'text-white' : 'text-blue-600'}`} />
                 <span className="truncate">{tab.label}</span>
               </button>
             );
@@ -304,10 +304,10 @@ export default function Partners() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: -20 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="group relative rounded-2xl sm:rounded-3xl bg-slate-900/90 border border-white/10 hover:border-blue-500/50 p-4 sm:p-6 md:p-8 backdrop-blur-2xl transition-all duration-300 shadow-2xl hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] flex flex-col justify-between overflow-hidden min-w-0"
+                className="group relative rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-blue-400 p-4 sm:p-6 md:p-8 backdrop-blur-2xl transition-all duration-300 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col justify-between overflow-hidden min-w-0"
               >
                 {/* Background Card Ambient Glow */}
-                <div className={`absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-br ${partner.accentColor} opacity-5 group-hover:opacity-15 blur-3xl transition-opacity duration-500 rounded-full pointer-events-none`} />
+                <div className={`absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-br ${partner.accentColor} opacity-5 group-hover:opacity-10 blur-3xl transition-opacity duration-500 rounded-full pointer-events-none`} />
 
                 <div>
                   {/* Top Badge & Category */}
@@ -315,7 +315,7 @@ export default function Partners() {
                     <span className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold border max-w-full ${partner.badgeBg}`}>
                       {partner.badge}
                     </span>
-                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 font-semibold uppercase tracking-wider min-w-0 truncate">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-500 font-semibold uppercase tracking-wider min-w-0 truncate">
                       {partner.category}
                     </span>
                   </div>
@@ -326,50 +326,50 @@ export default function Partners() {
                       <partner.icon size={24} className="sm:w-7 sm:h-7" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white group-hover:text-blue-300 transition-colors flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
+                      <h3 className="text-xl sm:text-2xl font-display font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
                         <span className="break-words">{partner.name}</span>
                         {partner.managedByYouKnow && (
                           <span className="text-[9px] sm:text-[10px] bg-blue-600 text-white font-mono px-1.5 py-0.5 rounded uppercase font-bold shrink-0">YOU KNOW</span>
                         )}
                       </h3>
-                      <p className="text-[11px] sm:text-xs font-mono text-slate-400 mt-0.5 break-words">{partner.shortTag}</p>
+                      <p className="text-[11px] sm:text-xs font-mono text-slate-500 mt-0.5 break-words">{partner.shortTag}</p>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">
                     {partner.description}
                   </p>
 
                   {/* Key Services Offered */}
                   <div className="mb-5 sm:mb-6 space-y-2">
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-slate-400 font-bold">Expertises & Domaines d'Action :</div>
+                    <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 font-bold">Expertises & Domaines d'Action :</div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {partner.services.slice(0, 4).map((srv, sIdx) => (
-                        <div key={sIdx} className="flex items-start gap-2 text-[11px] sm:text-xs text-slate-300 bg-white/5 p-2 rounded-xl border border-white/5 min-w-0">
-                          <CheckCircle2 size={13} className="text-emerald-400 shrink-0 mt-0.5" />
-                          <span className="break-words leading-tight">{srv}</span>
+                        <div key={sIdx} className="flex items-start gap-2 text-[11px] sm:text-xs text-slate-700 bg-slate-50 p-2 rounded-xl border border-slate-200/80 min-w-0">
+                          <CheckCircle2 size={13} className="text-emerald-600 shrink-0 mt-0.5" />
+                          <span className="break-words leading-tight font-medium">{srv}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {/* Stats Ribbon */}
-                  <div className="grid grid-cols-3 gap-1.5 sm:gap-2 bg-slate-950/80 p-2.5 sm:p-3 rounded-2xl border border-white/10 mb-5 sm:mb-6">
+                  <div className="grid grid-cols-3 gap-1.5 sm:gap-2 bg-slate-100/70 p-2.5 sm:p-3 rounded-2xl border border-slate-200 mb-5 sm:mb-6">
                     {partner.keyStats.map((st, stIdx) => (
                       <div key={stIdx} className="text-center min-w-0">
-                        <div className="text-xs sm:text-sm font-display font-black text-white truncate">{st.value}</div>
-                        <div className="text-[8px] sm:text-[9px] font-mono text-slate-400 truncate">{st.label}</div>
+                        <div className="text-xs sm:text-sm font-display font-black text-slate-900 truncate">{st.value}</div>
+                        <div className="text-[8px] sm:text-[9px] font-mono text-slate-500 truncate">{st.label}</div>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Bottom Actions */}
-                <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3">
+                <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3">
                   <button
                     onClick={() => setActivePartnerModal(partner)}
-                    className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Voir Fiche & Services</span>
                     <ChevronRight size={14} />
@@ -386,8 +386,8 @@ export default function Partners() {
                       <ExternalLink size={14} />
                     </a>
                   ) : (
-                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 flex items-center justify-center gap-1.5 bg-white/5 px-3 py-2 rounded-xl border border-white/5">
-                      <ShieldCheck size={14} className="text-emerald-400 shrink-0" />
+                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-500 flex items-center justify-center gap-1.5 bg-slate-100 px-3 py-2 rounded-xl border border-slate-200">
+                      <ShieldCheck size={14} className="text-emerald-600 shrink-0" />
                       <span>Fiche Réseau Validée</span>
                     </span>
                   )}
@@ -398,37 +398,37 @@ export default function Partners() {
         </div>
 
         {/* Strategic Collaboration Section */}
-        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-950/80 via-slate-900 to-purple-950/80 border border-blue-500/30 p-5 sm:p-8 md:p-12 mb-16 sm:mb-20 relative overflow-hidden backdrop-blur-2xl">
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white p-5 sm:p-8 md:p-12 mb-16 sm:mb-20 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center relative z-10">
             <div className="space-y-3 sm:space-y-4">
-              <span className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider max-w-full truncate">
+              <span className="inline-block px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider max-w-full truncate">
                 ÉCOSYSTÈME DE SERVICES MULTI-SECTEURS
               </span>
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-display font-black text-white leading-tight break-words">
                 Un éventail de compétences au service de vos besoins numériques et techniques.
               </h2>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
                 Découvrez des acteurs leaders dans leurs domaines respectifs : la création digitale avec <strong className="text-purple-300">Feselma Digital</strong>, la maintenance informatique avec <strong className="text-blue-300">SDM</strong>, la construction BTP avec <strong className="text-amber-300">Merveille Bat</strong>, la vente automobile avec <strong className="text-red-300">AutoLink</strong> (plateforme gérée par YOU KNOW) et l'imagerie aérienne avec <strong className="text-emerald-300">Miss Drone Company</strong>.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div className="p-3.5 sm:p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-                <div className="text-blue-400 font-bold text-xs sm:text-sm flex items-center gap-2">
+              <div className="p-3.5 sm:p-4 rounded-2xl bg-white/10 border border-white/15 space-y-2">
+                <div className="text-blue-300 font-bold text-xs sm:text-sm flex items-center gap-2">
                   <Zap size={16} className="shrink-0" /> Diversité des Services
                 </div>
-                <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-200 leading-relaxed">
                   Solutions ciblées couvrant le web, le média, la maintenance, la construction et les drones.
                 </p>
               </div>
 
-              <div className="p-3.5 sm:p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
-                <div className="text-emerald-400 font-bold text-xs sm:text-sm flex items-center gap-2">
+              <div className="p-3.5 sm:p-4 rounded-2xl bg-white/10 border border-white/15 space-y-2">
+                <div className="text-emerald-300 font-bold text-xs sm:text-sm flex items-center gap-2">
                   <ShieldCheck size={16} className="shrink-0" /> Professionnalisme Assuré
                 </div>
-                <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-200 leading-relaxed">
                   Chaque entité présente une expertise éprouvée et des standards de réalisation élevés.
                 </p>
               </div>
@@ -437,24 +437,24 @@ export default function Partners() {
         </div>
 
         {/* Partner Application Form Modal/Section */}
-        <div id="rejoindre" className="max-w-3xl mx-auto glass-card p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border-white/15 bg-slate-900/90 shadow-2xl relative">
+        <div id="rejoindre" className="max-w-3xl mx-auto bg-white p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl relative">
           <div className="text-center space-y-2 sm:space-y-3 mb-6 sm:mb-8">
-            <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+            <span className="inline-block px-3 py-1 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider">
               DEVENIR PARTENAIRE OFFICIEL
             </span>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-white break-words">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-slate-900 break-words">
               Rejoignez le Réseau YOU KNOW SOCIETY
             </h3>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Vous êtes une entreprise, un cabinet d'ingénierie, une agence ou une startup ? Proposez un partenariat stratégique avec notre groupe holding.
             </p>
           </div>
 
           {partnerFormSubmitted ? (
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="p-5 sm:p-6 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-center space-y-3">
-              <CheckCircle2 size={36} className="text-emerald-400 mx-auto" />
-              <h4 className="text-base sm:text-lg font-bold text-white">Demande de Partenariat Transmise !</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="p-5 sm:p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3">
+              <CheckCircle2 size={36} className="text-emerald-600 mx-auto" />
+              <h4 className="text-base sm:text-lg font-bold text-slate-900">Demande de Partenariat Transmise !</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
                 L'équipe directionnelle de YOU KNOW SOCIETY a bien reçu votre message. Nous vous recontacterons sous 24 à 48 heures.
               </p>
             </motion.div>
@@ -462,63 +462,63 @@ export default function Partners() {
             <form onSubmit={handlePartnerSubmit} className="space-y-3.5 sm:space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-[10px] sm:text-xs font-mono text-slate-400 uppercase mb-1">Nom de votre Entreprise / Organisme *</label>
+                  <label className="block text-[10px] sm:text-xs font-mono text-slate-600 font-bold uppercase mb-1">Nom de votre Entreprise / Organisme *</label>
                   <input
                     type="text"
                     required
                     value={partnerForm.companyName}
                     onChange={(e) => setPartnerForm({ ...partnerForm, companyName: e.target.value })}
                     placeholder="Ex: Feselma, SDM, BTP Inc..."
-                    className="w-full bg-slate-950 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-blue-600 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] sm:text-xs font-mono text-slate-400 uppercase mb-1">Nom du Représentant *</label>
+                  <label className="block text-[10px] sm:text-xs font-mono text-slate-600 font-bold uppercase mb-1">Nom du Représentant *</label>
                   <input
                     type="text"
                     required
                     value={partnerForm.contactName}
                     onChange={(e) => setPartnerForm({ ...partnerForm, contactName: e.target.value })}
                     placeholder="Prénom & Nom"
-                    className="w-full bg-slate-950 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-blue-600 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-[10px] sm:text-xs font-mono text-slate-400 uppercase mb-1">Adresse Email Pro *</label>
+                  <label className="block text-[10px] sm:text-xs font-mono text-slate-600 font-bold uppercase mb-1">Adresse Email Pro *</label>
                   <input
                     type="email"
                     required
                     value={partnerForm.email}
                     onChange={(e) => setPartnerForm({ ...partnerForm, email: e.target.value })}
                     placeholder="contact@votre-entreprise.com"
-                    className="w-full bg-slate-950 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-blue-600 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] sm:text-xs font-mono text-slate-400 uppercase mb-1">Téléphone / WhatsApp *</label>
+                  <label className="block text-[10px] sm:text-xs font-mono text-slate-600 font-bold uppercase mb-1">Téléphone / WhatsApp *</label>
                   <input
                     type="tel"
                     required
                     value={partnerForm.phone}
                     onChange={(e) => setPartnerForm({ ...partnerForm, phone: e.target.value })}
                     placeholder="+221 XX XXX XX XX"
-                    className="w-full bg-slate-950 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-blue-600 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] sm:text-xs font-mono text-slate-400 uppercase mb-1">Secteur d'Activité Principal *</label>
+                <label className="block text-[10px] sm:text-xs font-mono text-slate-600 font-bold uppercase mb-1">Secteur d'Activité Principal *</label>
                 <select
                   required
                   value={partnerForm.sector}
                   onChange={(e) => setPartnerForm({ ...partnerForm, sector: e.target.value })}
-                  className="w-full bg-slate-950 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-blue-600 focus:outline-none"
                 >
                   <option value="">Sélectionnez un secteur...</option>
                   <option value="tech">Tech, Développement Web & IA</option>
@@ -531,20 +531,20 @@ export default function Partners() {
               </div>
 
               <div>
-                <label className="block text-[10px] sm:text-xs font-mono text-slate-400 uppercase mb-1">Proposition de Partenariat / Message *</label>
+                <label className="block text-[10px] sm:text-xs font-mono text-slate-600 font-bold uppercase mb-1">Proposition de Partenariat / Message *</label>
                 <textarea
                   required
                   rows={4}
                   value={partnerForm.message}
                   onChange={(e) => setPartnerForm({ ...partnerForm, message: e.target.value })}
                   placeholder="Décrivez brièvement la synergie envisagée avec YOU KNOW SOCIETY..."
-                  className="w-full bg-slate-950 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-blue-600 focus:outline-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-lg shadow-blue-600/30 hover:brightness-110 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:brightness-110 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Send size={16} />
                 <span>Soumettre la Demande de Partenariat</span>
@@ -558,16 +558,16 @@ export default function Partners() {
       {/* Partner Detailed Drawer / Modal */}
       <AnimatePresence>
         {activePartnerModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="bg-slate-900 border border-blue-500/40 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 max-w-2xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar"
+              className="bg-white border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 max-w-2xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar"
             >
               <button
                 onClick={() => setActivePartnerModal(null)}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white cursor-pointer z-10"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 cursor-pointer z-10"
               >
                 ✕
               </button>
@@ -580,28 +580,28 @@ export default function Partners() {
                   <span className={`inline-block px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold border max-w-full truncate ${activePartnerModal.badgeBg}`}>
                     {activePartnerModal.badge}
                   </span>
-                  <h3 className="text-lg sm:text-2xl font-display font-extrabold text-white mt-1 break-words">
+                  <h3 className="text-lg sm:text-2xl font-display font-extrabold text-slate-900 mt-1 break-words">
                     {activePartnerModal.name}
                   </h3>
                 </div>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
                 <p className="break-words">{activePartnerModal.detailedBio}</p>
                 
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-blue-950/40 border border-blue-500/30 space-y-1.5 sm:space-y-2">
-                  <div className="text-blue-400 font-bold uppercase font-mono text-[10px] sm:text-[11px] flex items-center gap-1.5">
-                    <Zap size={14} className="shrink-0" /> Synthèse d'Excellence & Valeur Ajoutée :
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-blue-50 border border-blue-200 space-y-1.5 sm:space-y-2">
+                  <div className="text-blue-700 font-bold uppercase font-mono text-[10px] sm:text-[11px] flex items-center gap-1.5">
+                    <Zap size={14} className="shrink-0 text-blue-600" /> Synthèse d'Excellence & Valeur Ajoutée :
                   </div>
-                  <p className="text-slate-200 text-xs sm:text-sm break-words">{activePartnerModal.expertiseSummary}</p>
+                  <p className="text-slate-700 text-xs sm:text-sm break-words">{activePartnerModal.expertiseSummary}</p>
                 </div>
 
                 <div className="space-y-2">
-                  <div className="font-mono uppercase text-[10px] text-slate-400 font-bold">Services & Compétences Clés :</div>
+                  <div className="font-mono uppercase text-[10px] text-slate-500 font-bold">Services & Compétences Clés :</div>
                   <ul className="space-y-1.5">
                     {activePartnerModal.services.map((s, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-slate-200 text-xs sm:text-sm">
-                        <CheckCircle2 size={14} className="text-emerald-400 shrink-0 mt-0.5" />
+                      <li key={idx} className="flex items-start gap-2 text-slate-700 text-xs sm:text-sm">
+                        <CheckCircle2 size={14} className="text-emerald-600 shrink-0 mt-0.5" />
                         <span className="break-words">{s}</span>
                       </li>
                     ))}
@@ -609,7 +609,7 @@ export default function Partners() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3">
+              <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3">
                 {activePartnerModal.websiteUrl && (
                   <a
                     href={activePartnerModal.websiteUrl}

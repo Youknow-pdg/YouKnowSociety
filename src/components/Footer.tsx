@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-slate-950/80 pt-20 pb-10 relative overflow-hidden">
+    <footer className="border-t border-slate-200 bg-slate-900 text-slate-100 pt-20 pb-10 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
 
@@ -21,10 +21,10 @@ export default function Footer() {
                 referrerPolicy="no-referrer" 
               />
             </Link>
-            <p className="text-slate-400 text-xs leading-relaxed max-w-xs">
+            <p className="text-slate-300 text-xs leading-relaxed max-w-xs">
               YOU KNOW SOCIETY est un groupe holding technologique international spécialisé dans le numérique, l'innovation, la formation, le développement technologique et la transformation digitale.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-[10px] font-mono font-bold text-blue-400">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-full text-[10px] font-mono font-bold text-blue-300">
               <Globe size={12} /> SÉNÉGAL • AFRIQUE • MONDE ENTIER
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                 { name: 'Transformation Digitale & Media', path: '/services' },
               ].map((item, idx) => (
                 <li key={idx}>
-                  <Link to={item.path} className="text-slate-400 hover:text-white transition-colors text-xs flex items-center gap-1.5 group">
+                  <Link to={item.path} className="text-slate-300 hover:text-white transition-colors text-xs flex items-center gap-1.5 group">
                     <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-blue-400" />
                     <span>{item.name}</span>
                   </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                 { name: 'Études de Cas & Réalisations', path: '/cases' },
               ].map((item, idx) => (
                 <li key={idx}>
-                  <Link to={item.path} className="text-slate-400 hover:text-white transition-colors text-xs flex items-center gap-1.5 group">
+                  <Link to={item.path} className="text-slate-300 hover:text-white transition-colors text-xs flex items-center gap-1.5 group">
                     <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-blue-400" />
                     <span>{item.name}</span>
                   </Link>
@@ -78,46 +78,46 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-blue-400 shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold tracking-widest">Email Général</span>
-                  <a href="mailto:contact@youknow.click" className="text-xs text-slate-300 hover:text-blue-400 font-mono transition-colors">contact@youknow.click</a>
+                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Email Général</span>
+                  <a href="mailto:contact@youknow.click" className="text-xs text-slate-200 hover:text-blue-300 font-mono transition-colors">contact@youknow.click</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-blue-400 shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold tracking-widest">Ligne Directe / WhatsApp</span>
-                  <a href="https://wa.me/221702007285" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-300 hover:text-blue-400 font-mono transition-colors">+221 70 200 72 85</a>
+                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Ligne Directe / WhatsApp</span>
+                  <a href="https://wa.me/221702007285" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-200 hover:text-blue-300 font-mono transition-colors">+221 70 200 72 85</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Globe size={16} className="text-blue-400 shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold tracking-widest">Site Web Officiel</span>
+                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Site Web Officiel</span>
                   <a href="https://youknow.click" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-400 hover:underline font-mono">https://youknow.click</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-blue-400 shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold tracking-widest">Présence Globale</span>
-                  <span className="text-xs text-slate-300">Sénégal, Afrique & International</span>
+                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Présence Globale</span>
+                  <span className="text-xs text-slate-200">Sénégal, Afrique & International</span>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
             <p className="text-slate-400 text-[11px] font-bold">
               &copy; {currentYear} YOU KNOW SOCIETY. Tous droits réservés.
             </p>
             <span className="hidden sm:inline text-slate-600">•</span>
-            <p className="text-xs font-serif italic text-blue-400/80">
+            <p className="text-xs font-serif italic text-blue-300">
               "Where Knowledge Meets Innovation."
             </p>
           </div>
-          <div className="flex gap-6 text-[10px] text-slate-500 uppercase font-mono font-bold tracking-widest">
+          <div className="flex gap-6 text-[10px] text-slate-400 uppercase font-mono font-bold tracking-widest">
             <Link to="/about" className="hover:text-white transition-colors">Politique Qualité</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Accès Partenaires</Link>
           </div>

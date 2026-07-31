@@ -55,9 +55,9 @@ export default function Home() {
     <div className="space-y-0 overflow-hidden">
       
       {/* =========================================================================
-          SECTION 1: HERO SECTION — FOND BLEU NUIT & ÉLECTRIQUE
+          SECTION 1: HERO SECTION — FOND CLAIR ELEGANT & ELECTRIQUE
          ========================================================================= */}
-      <section className="relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-32 technical-grid bg-slate-950 text-white">
+      <section className="relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-32 technical-grid bg-slate-50 text-slate-900 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           
           {/* Top Status Strip */}
@@ -65,17 +65,17 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10"
+            className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200"
           >
-            <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-mono font-bold tracking-widest shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-blue-100 border border-blue-200 rounded-full text-blue-700 text-xs font-mono font-bold tracking-widest shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
               SOCIÉTÉ HOLDING MERI • SÉNÉGAL & MONDE
             </div>
 
-            <div className="hidden md:flex items-center gap-6 text-[11px] font-mono text-slate-400">
-              <span className="flex items-center gap-1.5"><Globe2 size={13} className="text-blue-400" /> DAKAR (+221 70 200 72 85)</span>
+            <div className="hidden md:flex items-center gap-6 text-[11px] font-mono text-slate-600 font-semibold">
+              <span className="flex items-center gap-1.5"><Globe2 size={13} className="text-blue-600" /> DAKAR (+221 70 200 72 85)</span>
               <span>•</span>
-              <span className="text-emerald-400 font-bold">STATUS: HOLDING ONLINE</span>
+              <span className="text-emerald-600 font-bold">STATUS: HOLDING ONLINE</span>
             </div>
           </motion.div>
 
@@ -87,61 +87,61 @@ export default function Home() {
               className="lg:col-span-7 space-y-8"
             >
               <div>
-                <span className="text-xs font-mono font-bold text-amber-400 tracking-[0.3em] uppercase mb-4 block">
+                <span className="text-xs font-mono font-bold text-amber-600 tracking-[0.3em] uppercase mb-4 block">
                   ★ DEVISE OFFICIELLE : WHERE KNOWLEDGE MEETS INNOVATION
                 </span>
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-[1.08]">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.08]">
                   Là où le savoir <br />
-                  <span className="text-gradient">rencontre l'innovation</span> <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700">rencontre l'innovation</span> <br />
                   pour créer l'avenir.
                 </h1>
               </div>
 
-              <p className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed font-normal">
-                <strong className="text-white font-semibold">YOU KNOW SOCIETY</strong> est une société sénégalaise spécialisée dans le numérique, l'innovation, la formation et la transformation digitale, guidant entreprises et particuliers vers le succès.
+              <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-normal">
+                <strong className="text-slate-900 font-semibold">YOU KNOW SOCIETY</strong> est une société sénégalaise spécialisée dans le numérique, l'innovation, la formation et la transformation digitale, guidant entreprises et particuliers vers le succès.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white px-9 py-4 rounded-full font-bold text-sm tracking-wider uppercase hover:brightness-110 transition-all shadow-xl shadow-blue-600/30 flex items-center gap-3 group border border-blue-400/30"
+                  className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white px-9 py-4 rounded-full font-bold text-sm tracking-wider uppercase hover:brightness-110 transition-all shadow-xl shadow-blue-600/20 flex items-center gap-3 group border border-blue-400/30"
                 >
                   Démarrer un projet
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                 </Link>
                 <Link
                   to="/subsidiaries"
-                  className="bg-slate-900/80 backdrop-blur-xl border border-white/15 text-white px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase hover:bg-slate-800 transition-all flex items-center gap-2 group hover:border-blue-500/50"
+                  className="bg-white border border-slate-200 text-slate-800 px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase hover:bg-slate-100 transition-all flex items-center gap-2 group shadow-sm hover:border-blue-500/50"
                 >
                   Explorer nos filiales
-                  <ChevronRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
               {/* Trust Badges - Fully Responsive Cards */}
-              <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl">
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all flex items-center sm:items-start justify-between sm:justify-start gap-3">
+              <div className="pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 transition-all flex items-center sm:items-start justify-between sm:justify-start gap-3 shadow-sm">
                   <div>
-                    <div className="text-xl sm:text-2xl lg:text-3xl font-display font-black text-white tracking-tight">100%</div>
-                    <div className="text-[11px] sm:text-[10px] font-mono text-slate-300 uppercase tracking-wider font-semibold">Pratique & Pro</div>
+                    <div className="text-xl sm:text-2xl lg:text-3xl font-display font-black text-slate-900 tracking-tight">100%</div>
+                    <div className="text-[11px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider font-semibold">Pratique & Pro</div>
                   </div>
-                  <Award size={20} className="text-amber-400 shrink-0 opacity-80" />
+                  <Award size={20} className="text-amber-500 shrink-0 opacity-80" />
                 </div>
 
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-all flex items-center sm:items-start justify-between sm:justify-start gap-3">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-blue-50 border border-blue-200 hover:border-blue-400 transition-all flex items-center sm:items-start justify-between sm:justify-start gap-3 shadow-sm">
                   <div>
-                    <div className="text-xl sm:text-2xl lg:text-3xl font-display font-black text-blue-400 tracking-tight">SASTOCK</div>
-                    <div className="text-[11px] sm:text-[10px] font-mono text-blue-300 uppercase tracking-wider font-semibold">SaaS Opérationnel</div>
+                    <div className="text-xl sm:text-2xl lg:text-3xl font-display font-black text-blue-700 tracking-tight">SASTOCK</div>
+                    <div className="text-[11px] sm:text-[10px] font-mono text-blue-800 uppercase tracking-wider font-semibold">SaaS Opérationnel</div>
                   </div>
-                  <Database size={20} className="text-blue-400 shrink-0 opacity-80" />
+                  <Database size={20} className="text-blue-600 shrink-0 opacity-80" />
                 </div>
 
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 hover:border-emerald-500/40 transition-all flex items-center sm:items-start justify-between sm:justify-start gap-3">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-emerald-50 border border-emerald-200 hover:border-emerald-400 transition-all flex items-center sm:items-start justify-between sm:justify-start gap-3 shadow-sm">
                   <div>
-                    <div className="text-xl sm:text-2xl lg:text-3xl font-display font-black text-emerald-400 tracking-tight">SÉNÉGAL</div>
-                    <div className="text-[11px] sm:text-[10px] font-mono text-emerald-300 uppercase tracking-wider font-semibold">& Rayonnement Global</div>
+                    <div className="text-xl sm:text-2xl lg:text-3xl font-display font-black text-emerald-700 tracking-tight">SÉNÉGAL</div>
+                    <div className="text-[11px] sm:text-[10px] font-mono text-emerald-800 uppercase tracking-wider font-semibold">& Rayonnement Global</div>
                   </div>
-                  <Globe2 size={20} className="text-emerald-400 shrink-0 opacity-80" />
+                  <Globe2 size={20} className="text-emerald-600 shrink-0 opacity-80" />
                 </div>
               </div>
             </motion.div>
@@ -153,57 +153,57 @@ export default function Home() {
               transition={{ duration: 0.9, delay: 0.2 }}
               className="lg:col-span-5 relative"
             >
-              <div className="relative rounded-[2.5rem] p-1 bg-gradient-to-b from-blue-500/30 via-indigo-500/10 to-transparent shadow-2xl backdrop-blur-2xl border border-white/10">
-                <div className="bg-slate-950/90 rounded-[2.3rem] p-6 lg:p-8 space-y-6 relative overflow-hidden">
+              <div className="relative rounded-[2.5rem] p-1 bg-gradient-to-b from-blue-300/40 via-indigo-300/20 to-transparent shadow-2xl backdrop-blur-2xl border border-slate-200">
+                <div className="bg-white rounded-[2.3rem] p-6 lg:p-8 space-y-6 relative overflow-hidden shadow-inner">
                   
-                  <div className="flex items-center justify-between pb-4 border-b border-white/10 relative z-10">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-200 relative z-10">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                      <div className="w-10 h-10 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-700 font-bold">
                         <Building2 size={20} />
                       </div>
                       <div>
-                        <div className="text-xs font-bold text-white uppercase tracking-wider">YOU KNOW SOCIETY</div>
-                        <div className="text-[10px] font-mono text-slate-400">SOCIÉTÉ MÈRE</div>
+                        <div className="text-xs font-bold text-slate-900 uppercase tracking-wider">YOU KNOW SOCIETY</div>
+                        <div className="text-[10px] font-mono text-slate-500 font-semibold">SOCIÉTÉ MÈRE</div>
                       </div>
                     </div>
-                    <span className="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[10px] font-mono font-bold text-emerald-400">
+                    <span className="px-3 py-1 bg-emerald-100 border border-emerald-200 rounded-full text-[10px] font-mono font-bold text-emerald-800">
                       ● ACTIF
                     </span>
                   </div>
 
                   {/* Dynamic Showcase inside Hero Card */}
                   <div className="space-y-4 relative z-10">
-                    <div className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-blue-500/40 transition-colors">
-                      <div className="flex justify-between text-xs font-mono text-slate-400 mb-1">
+                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-blue-400 transition-colors">
+                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-1">
                         <span>FILIALE TECH</span>
-                        <span className="text-blue-400 font-bold">YOU KNOW TECH</span>
+                        <span className="text-blue-700 font-bold">YOU KNOW TECH</span>
                       </div>
-                      <div className="text-sm font-bold text-white">Logiciels SaaS, IA & Développement sur mesure</div>
+                      <div className="text-sm font-bold text-slate-900">Logiciels SaaS, IA & Développement sur mesure</div>
                     </div>
 
-                    <div className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-indigo-500/40 transition-colors">
-                      <div className="flex justify-between text-xs font-mono text-slate-400 mb-1">
+                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-400 transition-colors">
+                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-1">
                         <span>LOGICIEL PHARE</span>
-                        <span className="text-emerald-400 font-bold">SASTOCK SAAS</span>
+                        <span className="text-emerald-700 font-bold">SASTOCK SAAS</span>
                       </div>
-                      <div className="text-sm font-bold text-white">"Votre stock sous contrôle. Vos bénéfices en croissance."</div>
+                      <div className="text-sm font-bold text-slate-900">"Votre stock sous contrôle. Vos bénéfices en croissance."</div>
                     </div>
 
-                    <div className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-purple-500/40 transition-colors">
-                      <div className="flex justify-between text-xs font-mono text-slate-400 mb-1">
+                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-purple-400 transition-colors">
+                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-1">
                         <span>YOU KNOW ACADEMY</span>
-                        <span className="text-purple-400 font-bold">FORMATIONS PRATIQUES</span>
+                        <span className="text-purple-700 font-bold">FORMATIONS PRATIQUES</span>
                       </div>
-                      <div className="text-sm font-bold text-white">Bureautique (Word, Excel, PowerPoint) & IA</div>
+                      <div className="text-sm font-bold text-slate-900">Bureautique (Word, Excel, PowerPoint) & IA</div>
                     </div>
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between text-xs font-mono text-slate-400 relative z-10">
+                  <div className="pt-2 flex items-center justify-between text-xs font-mono text-slate-500 relative z-10">
                     <span className="flex items-center gap-2">
-                      <Sparkles size={14} className="text-amber-400" />
+                      <Sparkles size={14} className="text-amber-500" />
                       Apprendre • Maîtriser • Réussir
                     </span>
-                    <Link to="/about" className="text-blue-400 hover:underline flex items-center gap-1 font-bold">
+                    <Link to="/about" className="text-blue-600 hover:underline flex items-center gap-1 font-bold">
                       Vision <ArrowUpRight size={14} />
                     </Link>
                   </div>
@@ -306,19 +306,19 @@ export default function Home() {
       </section>
 
       {/* =========================================================================
-          SECTION 3: ÉCOSYSTÈME DU GROUPE & FILIALES — FOND BLEU SAPHIR & ROI
+          SECTION 3: ÉCOSYSTÈME DU GROUPE & FILIALES — FOND CLAIR SOUPLE
          ========================================================================= */}
-      <section className="bg-gradient-to-b from-slate-950 via-blue-950 to-slate-950 text-white py-24 sm:py-32 relative z-10 border-y border-blue-500/20">
+      <section className="bg-slate-100 text-slate-900 py-24 sm:py-32 relative z-10 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 border border-blue-200 rounded-full text-blue-700 text-xs font-mono font-bold uppercase tracking-wider mb-4">
               <Layers size={14} /> PORTEFEUILLE DU GROUPE
             </div>
-            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight mb-4">
-              Nos Filiales <span className="text-gradient">& Pôles d'Excellence</span>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-4">
+              Nos Filiales <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">& Pôles d'Excellence</span>
             </h2>
-            <p className="text-slate-300 text-base leading-relaxed font-normal">
+            <p className="text-slate-600 text-base leading-relaxed font-normal">
               YOU KNOW SOCIETY rassemble des filiales spécialisées opérant en synergie pour couvrir l'intégralité de la chaîne de valeur numérique.
             </p>
           </div>
@@ -336,8 +336,8 @@ export default function Home() {
                     onClick={() => setSelectedSub(sub)}
                     className={`w-full text-left p-3.5 rounded-2xl border transition-all duration-300 flex items-center justify-between ${
                       isSelected 
-                        ? 'bg-slate-900 border-blue-500/60 shadow-lg shadow-blue-900/30 translate-x-1' 
-                        : 'bg-slate-950/50 border-white/5 hover:bg-slate-900/50 hover:border-white/10'
+                        ? 'bg-white border-blue-500 shadow-lg shadow-blue-500/10 translate-x-1' 
+                        : 'bg-white/60 border-slate-200 hover:bg-white hover:border-slate-300'
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -347,12 +347,12 @@ export default function Home() {
                       <div>
                         <div className="flex items-center gap-1.5">
                           <span className="text-[9px] font-mono font-bold text-slate-400">#{sub.number}</span>
-                          <h3 className="text-sm font-bold text-white font-display">{sub.name}</h3>
+                          <h3 className="text-sm font-bold text-slate-900 font-display">{sub.name}</h3>
                         </div>
-                        <p className="text-[10px] text-slate-400 line-clamp-1">{sub.sector}</p>
+                        <p className="text-[10px] text-slate-500 line-clamp-1">{sub.sector}</p>
                       </div>
                     </div>
-                    <ChevronRight size={16} className={isSelected ? 'text-blue-400' : 'text-slate-600'} />
+                    <ChevronRight size={16} className={isSelected ? 'text-blue-600' : 'text-slate-400'} />
                   </button>
                 );
               })}
@@ -367,7 +367,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.3 }}
-                  className="glass-card p-8 lg:p-10 border-white/10 bg-slate-900/70 relative overflow-hidden rounded-3xl"
+                  className="p-8 lg:p-10 border border-slate-200 bg-white relative overflow-hidden rounded-3xl shadow-lg"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                     <div className="flex items-center gap-3">
@@ -375,8 +375,8 @@ export default function Home() {
                         <selectedSub.icon size={24} />
                       </div>
                       <div>
-                        <span className="text-[10px] font-mono text-blue-400 uppercase tracking-widest font-bold">FILIALE #{selectedSub.number}</span>
-                        <h3 className="text-2xl lg:text-3xl font-display font-extrabold text-white">{selectedSub.name}</h3>
+                        <span className="text-[10px] font-mono text-blue-700 uppercase tracking-widest font-bold">FILIALE #{selectedSub.number}</span>
+                        <h3 className="text-2xl lg:text-3xl font-display font-extrabold text-slate-900">{selectedSub.name}</h3>
                       </div>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-mono font-bold uppercase border ${selectedSub.tagColor}`}>
@@ -384,27 +384,27 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <p className="text-slate-200 text-sm leading-relaxed mb-8">
+                  <p className="text-slate-700 text-sm leading-relaxed mb-8 font-normal">
                     {selectedSub.desc}
                   </p>
 
                   <div className="mb-8 space-y-3">
-                    <h4 className="text-xs font-mono uppercase text-slate-400 font-bold tracking-wider">Compétences Phares :</h4>
+                    <h4 className="text-xs font-mono uppercase text-slate-500 font-bold tracking-wider">Compétences Phares :</h4>
                     <div className="grid sm:grid-cols-2 gap-3">
                       {selectedSub.highlights.map((h, i) => (
-                        <div key={i} className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5">
-                          <Check size={16} className="text-blue-400 shrink-0" />
-                          <span className="text-xs font-semibold text-slate-200">{h}</span>
+                        <div key={i} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                          <Check size={16} className="text-blue-600 shrink-0" />
+                          <span className="text-xs font-semibold text-slate-800">{h}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-                    <span className="text-xs font-mono text-slate-400">{selectedSub.sector}</span>
+                  <div className="pt-6 border-t border-slate-200 flex items-center justify-between">
+                    <span className="text-xs font-mono text-slate-500 font-semibold">{selectedSub.sector}</span>
                     <Link
                       to="/subsidiaries"
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-400 hover:text-blue-300"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 hover:text-blue-700"
                     >
                       Voir les 18 filiales <ArrowRight size={14} />
                     </Link>
@@ -560,19 +560,19 @@ export default function Home() {
       </section>
 
       {/* =========================================================================
-          SECTION 5: YOU KNOW ACADEMY — FOND BLEU NUIT & CYAN
+          SECTION 5: YOU KNOW ACADEMY — FOND CLAIR SOUPLE
          ========================================================================= */}
-      <section className="bg-slate-950 text-white py-24 sm:py-32 relative z-10 border-y border-indigo-500/30">
+      <section className="bg-slate-50 text-slate-900 py-24 sm:py-32 relative z-10 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-200 rounded-full text-indigo-800 text-xs font-mono font-bold uppercase tracking-wider mb-4">
               <Award size={14} /> YOU KNOW ACADEMY
             </div>
-            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-4">
               Apprendre • Maîtriser • Réussir
             </h2>
-            <p className="text-slate-300 text-base leading-relaxed">
+            <p className="text-slate-600 text-base leading-relaxed font-medium">
               Des formations 100% pratiques, en ligne et hybrides avec suivi personnalisé et attestation / certificat de formation à la clé.
             </p>
           </div>
@@ -615,36 +615,36 @@ export default function Home() {
               <motion.div
                 key={idx}
                 whileHover={{ y: -6 }}
-                className="glass-card p-6 flex flex-col justify-between border-white/10 hover:border-indigo-500/40 transition-all group bg-slate-900/80"
+                className="p-6 flex flex-col justify-between border border-slate-200 rounded-3xl hover:border-indigo-400 hover:shadow-xl transition-all group bg-white"
               >
                 <div>
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-full">
+                    <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full">
                       {course.tag}
                     </span>
-                    <span className="text-[10px] font-mono text-slate-400">{course.duration}</span>
+                    <span className="text-[10px] font-mono text-slate-500 font-semibold">{course.duration}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white font-display mb-3 group-hover:text-indigo-300 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 font-display mb-3 group-hover:text-indigo-600 transition-colors">
                     {course.title}
                   </h3>
-                  <p className="text-slate-300 text-xs leading-relaxed mb-4">
+                  <p className="text-slate-600 text-xs leading-relaxed mb-4 font-normal">
                     {course.desc}
                   </p>
                   <div className="space-y-1.5 mb-6">
                     {course.items.map((it, ii) => (
-                      <div key={ii} className="text-[11px] text-slate-300 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                      <div key={ii} className="text-[11px] text-slate-700 font-medium flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
                         <span>{it}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-emerald-400">{course.badge}</span>
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold text-emerald-700">{course.badge}</span>
                   <Link
                     to="/services"
-                    className="text-xs font-bold text-indigo-400 group-hover:text-white flex items-center gap-1"
+                    className="text-xs font-bold text-indigo-600 group-hover:text-indigo-800 flex items-center gap-1"
                   >
                     S'inscrire <ArrowRight size={14} />
                   </Link>
@@ -654,19 +654,19 @@ export default function Home() {
           </div>
 
           {/* Pricing Modal Strip */}
-          <div className="mt-10 p-6 glass-card border-white/10 bg-slate-900/90 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-10 p-6 border border-slate-200 rounded-3xl bg-white shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 border border-indigo-200 flex items-center justify-center shrink-0">
                 <Zap size={24} />
               </div>
               <div>
-                <div className="text-sm font-bold text-white">Tarification Officielle YOU KNOW ACADEMY</div>
-                <div className="text-xs text-slate-300">Frais d'inscription : 5 000 FCFA • Coût par cours : 1 475 FCFA • 3 jours/semaine (flexible)</div>
+                <div className="text-sm font-bold text-slate-900">Tarification Officielle YOU KNOW ACADEMY</div>
+                <div className="text-xs text-slate-600">Frais d'inscription : 5 000 FCFA • Coût par cours : 1 475 FCFA • 3 jours/semaine (flexible)</div>
               </div>
             </div>
             <Link
               to="/contact"
-              className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider shrink-0 transition-all shadow-lg shadow-indigo-900/30"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider shrink-0 transition-all shadow-md"
             >
               Rejoindre l'Academy
             </Link>
