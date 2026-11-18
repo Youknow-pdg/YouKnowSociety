@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import MarqueeTicker from '../components/MarqueeTicker';
+import TechChipAnimation from '../components/TechChipAnimation';
 import { allSubsidiaries, groupProducts } from '../data/subsidiariesData';
 
 const servicesList = [
@@ -146,55 +147,61 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Interactive Futuristic Card Stage */}
+            {/* Interactive Futuristic Card Stage & Animated Electronic Tech Chip */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="lg:col-span-5 relative"
+              className="lg:col-span-5 relative flex flex-col items-center justify-center space-y-6"
             >
-              <div className="relative rounded-[2.5rem] p-1 bg-gradient-to-b from-blue-300/40 via-indigo-300/20 to-transparent shadow-2xl backdrop-blur-2xl border border-slate-200">
-                <div className="bg-white rounded-[2.3rem] p-6 lg:p-8 space-y-6 relative overflow-hidden shadow-inner">
+              {/* Electronic Tech Chip Visual Component */}
+              <div className="w-full flex justify-center py-2">
+                <TechChipAnimation size="md" showDetails={true} />
+              </div>
+
+              <div className="w-full relative rounded-[2rem] p-1 bg-gradient-to-b from-blue-300/40 via-indigo-300/20 to-transparent shadow-xl backdrop-blur-2xl border border-slate-200">
+                <div className="bg-white rounded-[1.8rem] p-5 lg:p-6 space-y-4 relative overflow-hidden shadow-inner">
                   
-                  <div className="flex items-center justify-between pb-4 border-b border-slate-200 relative z-10">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-700 font-bold">
-                        <Building2 size={20} />
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-200 relative z-10">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-9 h-9 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-700 font-bold">
+                        <Building2 size={18} />
                       </div>
                       <div>
                         <div className="text-xs font-bold text-slate-900 uppercase tracking-wider">YOU KNOW SOCIETY</div>
-                        <div className="text-[10px] font-mono text-slate-500 font-semibold">SOCIÉTÉ MÈRE</div>
+                        <div className="text-[10px] font-mono text-slate-500 font-semibold">SOCIÉTÉ MÈRE • TECH & INNOVATION</div>
                       </div>
                     </div>
-                    <span className="px-3 py-1 bg-emerald-100 border border-emerald-200 rounded-full text-[10px] font-mono font-bold text-emerald-800">
-                      ● ACTIF
+                    <span className="px-2.5 py-0.5 bg-emerald-100 border border-emerald-200 rounded-full text-[10px] font-mono font-bold text-emerald-800 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      ACTIF
                     </span>
                   </div>
 
                   {/* Dynamic Showcase inside Hero Card */}
-                  <div className="space-y-4 relative z-10">
-                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-blue-400 transition-colors">
-                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-1">
+                  <div className="space-y-3 relative z-10">
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-colors">
+                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-0.5">
                         <span>FILIALE TECH</span>
                         <span className="text-blue-700 font-bold">YOU KNOW TECH</span>
                       </div>
-                      <div className="text-sm font-bold text-slate-900">Logiciels SaaS, IA & Développement sur mesure</div>
+                      <div className="text-xs font-bold text-slate-900">Logiciels SaaS, IA & Développement sur mesure</div>
                     </div>
 
-                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-400 transition-colors">
-                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-1">
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-indigo-400 transition-colors">
+                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-0.5">
                         <span>LOGICIEL PHARE</span>
                         <span className="text-emerald-700 font-bold">SASTOCK SAAS</span>
                       </div>
-                      <div className="text-sm font-bold text-slate-900">"Votre stock sous contrôle. Vos bénéfices en croissance."</div>
+                      <div className="text-xs font-bold text-slate-900">"Votre stock sous contrôle. Vos bénéfices en croissance."</div>
                     </div>
 
-                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-purple-400 transition-colors">
-                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-1">
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 hover:border-purple-400 transition-colors">
+                      <div className="flex justify-between text-xs font-mono text-slate-500 mb-0.5">
                         <span>YOU KNOW ACADEMY</span>
                         <span className="text-purple-700 font-bold">FORMATIONS PRATIQUES</span>
                       </div>
-                      <div className="text-sm font-bold text-slate-900">Bureautique (Word, Excel, PowerPoint) & IA</div>
+                      <div className="text-xs font-bold text-slate-900">Bureautique (Word, Excel, PowerPoint) & IA</div>
                     </div>
                   </div>
 
@@ -216,6 +223,73 @@ export default function Home() {
 
       {/* Marquee Ticker Ribbon */}
       <MarqueeTicker />
+
+      {/* =========================================================================
+          SECTION ELECTRONIC CHIP: ARCHITECTURE TECHNOLOGIQUE & INNOVATION SILICON
+         ========================================================================= */}
+      <section className="bg-slate-950 text-white py-16 sm:py-24 relative overflow-hidden border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-cyan-950/80 border border-cyan-800/80 rounded-full text-cyan-400 text-xs font-mono font-bold tracking-widest uppercase">
+                <Cpu size={15} className="animate-spin-slow text-cyan-400" />
+                MOTEUR TECHNOLOGIQUE YOU KNOW
+              </div>
+
+              <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+                Une architecture numérique <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">
+                  propulsée par l'innovation.
+                </span>
+              </h2>
+
+              <p className="text-slate-300 text-base leading-relaxed">
+                Notre infrastructure technologique repose sur une puce d'innovation virtuelle symbolisant la vitesse, la précision et la puissance de nos solutions logicielles comme <strong className="text-white">SASTOCK</strong> et nos outils IA d'automatisation.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+                    <Zap size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-white font-display">Haute Vitesse (5.2 GHz)</h4>
+                    <p className="text-xs text-slate-400 mt-1">Calculs instantanés et gestion des données en temps réel.</p>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-white font-display">Sécurité Maximale</h4>
+                    <p className="text-xs text-slate-400 mt-1">Cryptage des données et protection haut niveau pour les entreprises.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-3 px-7 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider rounded-full hover:brightness-110 transition-all shadow-lg shadow-cyan-500/20"
+                >
+                  <span>Découvrir nos solutions TECH & IA</span>
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 flex justify-center relative">
+              <div className="relative w-full max-w-md">
+                <TechChipAnimation size="lg" showDetails={true} />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* =========================================================================
           SECTION 2: QUI SOMMES-NOUS & SIGNIFICATION YOU KNOW — FOND BLANC PUR
@@ -420,26 +494,27 @@ export default function Home() {
       {/* =========================================================================
           SECTION 4: LE LOGICIEL SASTOCK (SaaS Phare par YOU KNOW TECH) — FOND BLANC PURE
          ========================================================================= */}
-      <section className="bg-slate-50 text-slate-900 py-24 sm:py-32 relative z-10 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-white p-8 lg:p-16 rounded-[3rem] border border-slate-200 shadow-xl relative overflow-hidden">
-            <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <section className="bg-slate-50 text-slate-900 py-8 sm:py-20 lg:py-32 relative z-10 border-y border-slate-200 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6">
+          <div className="bg-white p-3.5 sm:p-8 lg:p-16 rounded-2xl sm:rounded-3xl lg:rounded-[3rem] border border-slate-200 shadow-xl relative overflow-hidden">
+            <div className="grid lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
               
-              <div className="lg:col-span-6 space-y-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-800 text-xs font-mono font-bold uppercase tracking-wider">
-                  <Database size={14} /> LOGICIEL SAAS PHARE PAR YOU KNOW TECH
+              <div className="lg:col-span-6 space-y-3.5 sm:space-y-6 w-full max-w-full overflow-hidden">
+                <div className="inline-flex max-w-full items-center gap-1.5 px-2.5 py-1 bg-emerald-50 border border-emerald-200 rounded-lg sm:rounded-full text-emerald-800 text-[9px] min-[380px]:text-xs font-mono font-bold uppercase tracking-normal sm:tracking-wider flex-wrap leading-tight">
+                  <Database size={13} className="shrink-0" />
+                  <span className="break-words">LOGICIEL SAAS PHARE PAR YOU KNOW TECH</span>
                 </div>
-                <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-slate-900 tracking-tight">
+                <h2 className="text-2xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight break-words">
                   SASTOCK
                 </h2>
-                <p className="text-xl font-bold text-amber-600 italic">
+                <p className="text-xs sm:text-xl font-bold text-amber-600 italic leading-snug break-words">
                   "Votre stock sous contrôle. Vos bénéfices en croissance."
                 </p>
-                <p className="text-slate-600 leading-relaxed text-base font-normal">
+                <p className="text-slate-600 leading-relaxed text-xs sm:text-base font-normal break-words">
                   Permet aux commerçants, boutiques, magasins et vendeurs de gérer facilement leur stock et leurs ventes avec des tableaux de bord en temps réel et des alertes intelligentes.
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 pt-2">
+                <div className="grid grid-cols-1 min-[360px]:grid-cols-2 gap-2 sm:gap-3 pt-1 sm:pt-2">
                   {[
                     'Gestion de stock intuitive',
                     'Gestion des ventes rapide',
@@ -448,42 +523,42 @@ export default function Home() {
                     'Connexion Google sécurisée',
                     'Tableaux de bord temps réel',
                   ].map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2.5">
-                      <CheckCircle2 className="text-emerald-600 shrink-0" size={16} />
-                      <span className="text-xs font-semibold text-slate-700">{feature}</span>
+                    <div key={i} className="flex items-start gap-1.5 sm:gap-2">
+                      <CheckCircle2 className="text-emerald-600 shrink-0 mt-0.5" size={15} />
+                      <span className="text-[11px] sm:text-xs font-semibold text-slate-700 leading-tight break-words">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-4 flex flex-wrap gap-4">
+                <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full">
                   <Link
                     to="/contact"
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2"
+                    className="w-full sm:w-auto justify-center bg-emerald-600 hover:bg-emerald-700 text-white px-4 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-[11px] sm:text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2 text-center"
                   >
-                    Demander une démo SASTOCK
-                    <ArrowRight size={16} />
+                    <span className="truncate">Demander une démo SASTOCK</span>
+                    <ArrowRight size={15} className="shrink-0" />
                   </Link>
                   <a
                     href="https://youknow.click"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-slate-100 border border-slate-300 hover:bg-slate-200 text-slate-800 px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2"
+                    className="w-full sm:w-auto justify-center bg-slate-100 border border-slate-300 hover:bg-slate-200 text-slate-800 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full font-bold text-[11px] sm:text-xs uppercase tracking-wider transition-all flex items-center gap-2 text-center"
                   >
-                    Visiter youknow.click
-                    <Globe2 size={16} />
+                    <span className="truncate">Visiter youknow.click</span>
+                    <Globe2 size={15} className="shrink-0" />
                   </a>
                 </div>
               </div>
 
               {/* Interactive Dashboard Tab Demo */}
-              <div className="lg:col-span-6">
-                <div className="rounded-3xl border border-slate-200 bg-slate-900 text-white p-6 sm:p-8 space-y-6 shadow-2xl">
+              <div className="lg:col-span-6 w-full max-w-full overflow-hidden">
+                <div className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-slate-900 text-white p-3 sm:p-6 lg:p-8 space-y-3.5 sm:space-y-6 shadow-2xl overflow-hidden w-full">
                   
                   {/* Tabs */}
-                  <div className="flex border-b border-white/10 pb-3 gap-2">
+                  <div className="flex border-b border-white/10 pb-2 gap-1 sm:gap-2 overflow-x-auto custom-scrollbar max-w-full">
                     <button
                       onClick={() => setActiveTab('sales')}
-                      className={`px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all ${
+                      className={`px-2.5 sm:px-4 py-1.5 rounded-xl text-[9px] sm:text-xs font-mono font-bold transition-all whitespace-nowrap shrink-0 ${
                         activeTab === 'sales' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-400 hover:text-white'
                       }`}
                     >
@@ -491,7 +566,7 @@ export default function Home() {
                     </button>
                     <button
                       onClick={() => setActiveTab('stock')}
-                      className={`px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all ${
+                      className={`px-2.5 sm:px-4 py-1.5 rounded-xl text-[9px] sm:text-xs font-mono font-bold transition-all whitespace-nowrap shrink-0 ${
                         activeTab === 'stock' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-400 hover:text-white'
                       }`}
                     >
@@ -499,7 +574,7 @@ export default function Home() {
                     </button>
                     <button
                       onClick={() => setActiveTab('ai')}
-                      className={`px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all ${
+                      className={`px-2.5 sm:px-4 py-1.5 rounded-xl text-[9px] sm:text-xs font-mono font-bold transition-all whitespace-nowrap shrink-0 ${
                         activeTab === 'ai' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-400 hover:text-white'
                       }`}
                     >
@@ -508,47 +583,47 @@ export default function Home() {
                   </div>
 
                   {/* Tab Content */}
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4 w-full">
                     {activeTab === 'sales' && (
-                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
-                        <div className="flex justify-between items-center p-4 bg-white/5 rounded-2xl border border-white/10">
-                          <div>
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3 w-full">
+                        <div className="flex flex-col min-[380px]:flex-row justify-between items-start min-[380px]:items-center gap-2 p-3 sm:p-4 bg-white/5 rounded-2xl border border-white/10 w-full">
+                          <div className="min-w-0 flex-1">
                             <div className="text-[10px] font-mono text-slate-400">Total Ventes Réalisées</div>
-                            <div className="text-2xl font-mono font-bold text-emerald-400">285 000 FCFA</div>
+                            <div className="text-lg sm:text-2xl font-mono font-bold text-emerald-400 truncate">285 000 FCFA</div>
                           </div>
-                          <span className="text-xs font-mono bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded-full font-bold">+18.4%</span>
+                          <span className="text-[10px] sm:text-xs font-mono bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold shrink-0 self-start min-[380px]:self-auto">+18.4%</span>
                         </div>
-                        <div className="p-3 bg-white/5 rounded-xl text-xs font-mono text-slate-300 flex justify-between">
-                          <span>Boutique Dakar Centre</span>
-                          <span className="font-bold text-white">12 Commandes</span>
+                        <div className="p-2.5 sm:p-3 bg-white/5 rounded-xl text-[11px] sm:text-xs font-mono text-slate-300 flex justify-between items-center gap-2 w-full">
+                          <span className="truncate">Boutique Dakar Centre</span>
+                          <span className="font-bold text-white shrink-0">12 Commandes</span>
                         </div>
                       </motion.div>
                     )}
 
                     {activeTab === 'stock' && (
-                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
-                        <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex items-center justify-between">
-                          <div>
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3 w-full">
+                        <div className="p-3 sm:p-4 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex flex-col min-[380px]:flex-row items-start min-[380px]:items-center justify-between gap-2 w-full">
+                          <div className="min-w-0 flex-1">
                             <div className="text-xs font-bold text-amber-400">Alerte Rupture de Stock</div>
-                            <div className="text-xs text-slate-300">Article #402 - 2 unités restantes</div>
+                            <div className="text-xs text-slate-300 truncate">Article #402 - 2 unités restantes</div>
                           </div>
-                          <span className="text-[10px] font-mono bg-amber-500/20 text-amber-300 px-2 py-1 rounded">Réapprovisionner</span>
+                          <span className="text-[10px] font-mono bg-amber-500/20 text-amber-300 px-2 py-1 rounded shrink-0">Réapprovisionner</span>
                         </div>
                       </motion.div>
                     )}
 
                     {activeTab === 'ai' && (
-                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
-                        <div className="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl">
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3 w-full">
+                        <div className="p-3 sm:p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl w-full">
                           <div className="text-xs font-bold text-indigo-300 mb-1">Bénéfice Net Estimé</div>
-                          <div className="text-2xl font-mono font-bold text-indigo-400">92 400 FCFA</div>
-                          <p className="text-[10px] text-slate-400 mt-2">Marges calculées automatiquement par produit vendeur.</p>
+                          <div className="text-lg sm:text-2xl font-mono font-bold text-indigo-400 truncate">92 400 FCFA</div>
+                          <p className="text-[10px] text-slate-400 mt-2 leading-tight">Marges calculées automatiquement par produit vendeur.</p>
                         </div>
                       </motion.div>
                     )}
                   </div>
 
-                  <div className="text-[10px] font-mono text-slate-400 text-center border-t border-white/10 pt-3">
+                  <div className="text-[10px] font-mono text-slate-400 text-center border-t border-white/10 pt-2.5 truncate">
                     SASTOCK SAAS • DÉVELOPPÉ PAR YOU KNOW TECH
                   </div>
                 </div>

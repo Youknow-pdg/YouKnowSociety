@@ -1,0 +1,246 @@
+{
+  "adminProfile": {
+    "name": "Feus YOU KNOW",
+    "role": "Fondateur & Administrateur Système",
+    "email": "contact@youknow.click",
+    "phone": "+221 70 200 72 85",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop",
+    "passcode": "7777"
+  },
+  "requests": [
+    {
+      "id": 1,
+      "type": "devis",
+      "name": "Test Client",
+      "email": "client@youknow.click",
+      "phone": "+221770000000",
+      "company": "Sénégal Tech",
+      "subject": "Demande de devis application web",
+      "message": "Bonjour, nous souhaitons développer une application web.",
+      "status": "En attente",
+      "admin_notes": "",
+      "created_at": "2026-08-04T01:27:25.364Z"
+    }
+  ],
+  "members": [],
+  "topics": [],
+  "replies": [],
+  "events": [
+    {
+      "id": 1,
+      "title": "Webinaire Live : L'Intelligence Artificielle & L'Avenir des Entreprises en Afrique",
+      "description": "Découvrez comment l'IA générative et l'automatisation redéfinissent les processus métiers. Session interactive en direct avec démonstrations d'agents IA et cas d'usage sénégalais.",
+      "category": "Webinaire IA & Tech",
+      "event_date": "Aujourd'hui",
+      "event_time": "16:00 - 17:30 (Heure de Dakar / GMT)",
+      "speaker": "Feus YOU KNOW",
+      "speaker_role": "Fondateur & Visionnaire YOU KNOW SOCIETY",
+      "speaker_avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop",
+      "status": "LIVE",
+      "max_participants": 200,
+      "created_at": "2026-08-04T01:27:19.079Z"
+    },
+    {
+      "id": 2,
+      "title": "Masterclass YOU KNOW ACADEMY : Maîtriser Excel Avancé & Les Tableaux de Bord",
+      "description": "Session 100% pratique sur les formules complexes, les TCD et la création de rapports professionnels automatiques pour booster votre carrière.",
+      "category": "Formation Bureautique",
+      "event_date": "Samedi 8 Août 2026",
+      "event_time": "10:00 - 12:00 (GMT)",
+      "speaker": "Fatou Bintou",
+      "speaker_role": "Lead Formatrice YOU KNOW ACADEMY",
+      "speaker_avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=256&auto=format&fit=crop",
+      "status": "UPCOMING",
+      "max_participants": 150,
+      "created_at": "2026-08-04T01:27:19.080Z"
+    },
+    {
+      "id": 3,
+      "title": "Démo Live SASTOCK : Automatisez Votre Stock & Vos Bénéfices",
+      "description": "Présentation guidée du logiciel SASTOCK par YOU KNOW TECH pour boutiquiers, commerçants et gestionnaires de stock. Questions/Réponses en direct.",
+      "category": "Démo Produit SaaS",
+      "event_date": "Mercredi 12 Août 2026",
+      "event_time": "15:00 - 16:15 (GMT)",
+      "speaker": "Ousmane Diallo",
+      "speaker_role": "Lead Developer YOU KNOW TECH",
+      "speaker_avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop",
+      "status": "UPCOMING",
+      "max_participants": 300,
+      "created_at": "2026-08-04T01:27:19.080Z"
+    }
+  ],
+  "webinars": [
+    {
+      "id": "open-room",
+      "title": "Studio Permanent 24/7 - Salle Libre (Accès Immédiat)",
+      "room_name": "youknow-studio-libre-permanent",
+      "description": "Webinaire en accès permanent 24/7, sans planification, sans demande de participation ni restriction. Échangez en direct avec la communauté et les experts de YOU KNOW SOCIETY.",
+      "trainer": "YOU KNOW SOCIETY (Accès Libre)",
+      "date": "Accessible 24h/24 & 7j/7",
+      "start_time": "En continu",
+      "end_time": "Ouvert à tous",
+      "status": "EN DIRECT 24/7",
+      "is_permanent": true,
+      "created_at": "2026-08-04T01:27:19.080Z"
+    },
+    {
+      "id": 1,
+      "title": "Webinaire Live : L'Intelligence Artificielle & L'Avenir des Entreprises",
+      "room_name": "webinaire-youknow-live-1",
+      "description": "Session interactive en direct avec démonstrations d'agents IA, outils de transformation digitale et SASTOCK par YOU KNOW SOCIETY.",
+      "trainer": "Feus YOU KNOW",
+      "date": "Aujourd'hui",
+      "start_time": "16:00 GMT",
+      "end_time": "17:30 GMT",
+      "status": "En cours",
+      "created_at": "2026-08-04T01:27:19.080Z"
+    },
+    {
+      "id": 2,
+      "title": "Masterclass YOU KNOW ACADEMY : Maîtriser Excel Avancé",
+      "room_name": "formation-excel-avance-2",
+      "description": "Session 100% pratique sur les tableaux de bord et rapports dynamiques Excel.",
+      "trainer": "Fatou Bintou",
+      "date": "Samedi 8 Août 2026",
+      "start_time": "10:00 GMT",
+      "end_time": "12:00 GMT",
+      "status": "En attente",
+      "created_at": "2026-08-04T01:27:19.080Z"
+    }
+  ],
+  "webinarRequests": [
+    {
+      "id": 1,
+      "event_id": 1,
+      "participant_name": "Awa Diop",
+      "participant_email": "awa.diop@tech-africa.org",
+      "participant_role": "Développeuse Web",
+      "status": "ACCEPTED",
+      "created_at": "2026-08-04T01:27:19.080Z"
+    },
+    {
+      "id": 2,
+      "event_id": 1,
+      "participant_name": "Mamadou Ndiaye",
+      "participant_email": "m.ndiaye@entreprise.sn",
+      "participant_role": "Directeur IT",
+      "status": "PENDING",
+      "created_at": "2026-08-04T01:27:19.080Z"
+    }
+  ],
+  "webinarMessages": [
+    {
+      "id": 1,
+      "event_id": 1,
+      "sender_name": "Feus YOU KNOW (Hôte)",
+      "sender_role": "Animateur Live",
+      "message": "Bienvenue à tous au webinaire officiel YOU KNOW SOCIETY ! La session démarre. N'hésitez pas à poser vos questions dans le chat.",
+      "created_at": "2026-08-04T01:22:19.080Z"
+    },
+    {
+      "id": 2,
+      "event_id": 1,
+      "sender_name": "Awa Diop",
+      "sender_role": "Participant",
+      "message": "Bonjour à l'équipe ! Très heureuse d'assister à cette démonstration sur l'IA et SASTOCK.",
+      "created_at": "2026-08-04T01:25:19.080Z"
+    }
+  ],
+  "webinarParticipants": [],
+  "applications": [
+    {
+      "id": "youknow-devapp-zip",
+      "name": "YOUKNOW-DevApp",
+      "subtitle": "Kit Développeur & Application Officielle (Contient base.apk)",
+      "category": "Développement & Outils",
+      "subsidiary": "YOU KNOW TECH",
+      "appType": "file",
+      "platform": "ZIP DevApp / Outils",
+      "fileUrl": "/YOUKNOW-DevApp.zip",
+      "fileName": "YOUKNOW-DevApp.zip",
+      "fileSize": "45.8 Mo",
+      "sizeBytes": 48025600,
+      "targetAudience": "Développeurs, Étudiants IDA (Université Numérique) & Apprenants YOU KNOW ACADEMY",
+      "description": "Le package complet YOUKNOW-DevApp incluant l'application mobile Android officielle (base.apk), des modèles de projets PWA modernes, les templates de code IDA, des scripts de déploiement et la documentation des services YOU KNOW SOCIETY.",
+      "highlights": [
+        "Contient l'application Android base.apk prête à être installée",
+        "Templates de projets Web PWA & Android Kotlin prêts à l'emploi",
+        "Schémas de base de données SQL pour travaux pratiques IDA",
+        "Documentation complète et scripts d'automatisation YOU KNOW TECH"
+      ],
+      "techStack": [
+        "base.apk (Android)",
+        "PWA HTML5/JS",
+        "SQL & Scripts",
+        "Documentation"
+      ],
+      "status": "Opérationnel",
+      "badgeText": "Package Officiel",
+      "isSpotlight": true,
+      "imagePlaceholderGradient": "from-amber-600 to-amber-950",
+      "createdAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "monbudget-pwa",
+      "name": "MonBudget",
+      "subtitle": "Application PWA de Gestion Financière & Budgétaire",
+      "category": "Finance & Gestion",
+      "subsidiary": "YOU KNOW TECH",
+      "appType": "link",
+      "platform": "Web / PWA",
+      "url": "https://monbudget.youknow.click",
+      "isIframePreviewable": true,
+      "targetAudience": "Particuliers, Entrepreneurs & Gestionnaires de micro-finances",
+      "description": "Application Progressive Web App fluide pour suivre ses dépenses personnelles, planifier des budgets mensuels, visualiser des graphiques d'épargne et exporter des rapports financiers sans connexion obligatoire.",
+      "highlights": [
+        "Mode hors-ligne avec synchronisation automatique PWA",
+        "Catégorisation intelligente des dépenses & alertes de dépassement",
+        "Export PDF et Excel des bilans financiers",
+        "Compatible Smartphone, Tablette et Ordinateur"
+      ],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "IndexedDB",
+        "PWA Offline"
+      ],
+      "status": "En ligne",
+      "badgeText": "PWA Web App",
+      "isSpotlight": false,
+      "imagePlaceholderGradient": "from-blue-600 to-indigo-950",
+      "createdAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "sastock-saas",
+      "name": "SASTOCK",
+      "subtitle": "Plateforme SaaS de Gestion de Stock & Ventes pour Commerçants",
+      "category": "Commerce & Entreprise",
+      "subsidiary": "YOU KNOW TECH",
+      "appType": "link",
+      "platform": "SaaS Web",
+      "url": "https://sastock.youknow.click",
+      "isIframePreviewable": true,
+      "targetAudience": "Boutiques, Magasins, Grossistes, Supermarchés & E-commerçants",
+      "description": "Solution SaaS cloud complète développée par YOU KNOW TECH permettant aux commerçants de gérer leurs stocks en temps réel, facturer rapidement, suivre les bénéfices nets et recevoir des alertes de réapprovisionnement.",
+      "highlights": [
+        "Gestion multi-magasins et inventaire en temps réel",
+        "Caisse enregistreuse tactile & impression de reçus",
+        "Calcul automatique des marges et bénéfices par période",
+        "Connexion sécurisée Google et tableaux de bord décisionnels"
+      ],
+      "techStack": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL / MySQL",
+        "Tailwind CSS",
+        "Google Auth"
+      ],
+      "status": "En ligne",
+      "badgeText": "Logiciel SaaS Pro",
+      "isSpotlight": false,
+      "imagePlaceholderGradient": "from-emerald-600 to-teal-950",
+      "createdAt": "2026-08-01T00:00:00.000Z"
+    }
+  ]
+}

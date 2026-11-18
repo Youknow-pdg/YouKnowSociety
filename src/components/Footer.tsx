@@ -34,8 +34,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: 'Développement Web & Applications', path: '/services' },
+                { name: 'Applications Développées (Catalogue)', path: '/applications' },
                 { name: 'Intelligence Artificielle & IA', path: '/services' },
-                { name: 'Logiciel SaaS SASTOCK', path: '/' },
+                { name: 'Logiciel SaaS SASTOCK', path: '/applications' },
                 { name: 'Formations YOU KNOW ACADEMY', path: '/services' },
                 { name: 'Informatique Bureautique', path: '/' },
                 { name: 'Transformation Digitale & Media', path: '/services' },
@@ -55,6 +56,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: 'À propos de YOU KNOW SOCIETY', path: '/about' },
+                { name: 'Communauté YOU KNOW (Ateliers & Rencontres)', path: '/community' },
+                { name: 'Grand Forum (Discussions Ouvertes)', path: '/forum' },
                 { name: 'Écosystème & Partenaires (Feselma, SDM...)', path: '/partners' },
                 { name: 'YOU KNOW TECH (SaaS & IA)', path: '/subsidiaries' },
                 { name: 'YOU KNOW COMMERCE & FINANCE', path: '/subsidiaries' },
@@ -83,9 +86,16 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
+                <Phone size={16} className="text-emerald-400 shrink-0 mt-0.5" />
+                <div className="flex flex-col">
+                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Groupe WhatsApp Communauté</span>
+                  <a href="https://chat.whatsapp.com/LKrTO2fUd6J18oEu8H2soZ?s=sh&p=a&ilr=1" target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-300 hover:text-emerald-200 font-bold transition-colors">Rejoindre le Groupe WhatsApp</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
                 <Phone size={16} className="text-blue-400 shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Ligne Directe / WhatsApp</span>
+                  <span className="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Ligne Directe / Contact</span>
                   <a href="https://wa.me/221702007285" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-200 hover:text-blue-300 font-mono transition-colors">+221 70 200 72 85</a>
                 </div>
               </li>
@@ -120,6 +130,9 @@ export default function Footer() {
           <div className="flex gap-6 text-[10px] text-slate-400 uppercase font-mono font-bold tracking-widest">
             <Link to="/about" className="hover:text-white transition-colors">Politique Qualité</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Accès Partenaires</Link>
+            <Link to="/admin" className="hover:text-blue-400 text-slate-500 transition-colors flex items-center gap-1">
+              <span>YOUKNOW</span>
+            </Link>
           </div>
         </div>
       </div>

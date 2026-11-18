@@ -11,12 +11,37 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formState);
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/requests', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: formState.subject === 'devis' ? 'devis' : (formState.subject || 'contact'),
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone,
+          company: formState.company,
+          subject: formState.subject ? `[${formState.subject.toUpperCase()}] ${formState.name}` : 'Demande via le site web',
+          message: formState.message
+        })
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSubmitted(true);
+      }
+    } catch (err) {
+      console.error(err);
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    };
   };
 
   return (

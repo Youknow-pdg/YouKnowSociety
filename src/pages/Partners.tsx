@@ -186,8 +186,25 @@ export default function Partners() {
     return partner.categoryGroup === selectedFilter;
   });
 
-  const handlePartnerSubmit = (e: FormEvent) => {
+  const handlePartnerSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    try {
+      await fetch('/api/requests', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'partenariat',
+          name: partnerForm.contactName || partnerForm.companyName,
+          email: partnerForm.email,
+          phone: partnerForm.phone,
+          company: partnerForm.companyName,
+          subject: `[DEMANDE DE PARTENARIAT] ${partnerForm.companyName}`,
+          message: `Secteur: ${partnerForm.sector}\nReprésentant: ${partnerForm.contactName}\nMessage: ${partnerForm.message}`
+        })
+      });
+    } catch (err) {
+      console.error('Error submitting partner request:', err);
+    }
     setPartnerFormSubmitted(true);
     setTimeout(() => {
       setPartnerFormSubmitted(false);

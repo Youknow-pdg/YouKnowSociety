@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import SupportChatWidget from './SupportChatWidget';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLocation } from 'react-router-dom';
 
@@ -53,12 +54,15 @@ export default function Layout({ children }: LayoutProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="flex-grow pt-20"
+          className={`flex-grow ${
+            location.pathname === '/admin' ? 'pt-28 sm:pt-36 lg:pt-40' : 'pt-28 sm:pt-32 lg:pt-28'
+          }`}
         >
           {children}
         </motion.main>
       </AnimatePresence>
       <Footer />
+      {location.pathname !== '/admin' && <SupportChatWidget />}
     </div>
   );
 }

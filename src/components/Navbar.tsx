@@ -14,6 +14,9 @@ const navLinks = [
   { name: 'À propos', path: '/about' },
   { name: 'Services', path: '/services' },
   { name: 'Filiales (18)', path: '/subsidiaries' },
+  { name: 'Applications', path: '/applications' },
+  { name: 'Communauté', path: '/community' },
+  { name: 'Forum', path: '/forum' },
   { name: 'Partenaires', path: '/partners' },
   { name: 'Études de cas', path: '/cases' },
   { name: 'Contact', path: '/contact' },
@@ -67,6 +70,9 @@ export default function Navbar() {
       category: p.badge,
       link: '/subsidiaries'
     })),
+    { title: 'IDA Étudiant - Université Numérique (Télécharger base.apk)', category: 'Application Mobile Android', link: '/applications' },
+    { title: 'MonBudget - Application PWA de Gestion Financière', category: 'Application Développée', link: '/applications' },
+    { title: 'SASTOCK - SaaS de Gestion de Stock & Ventes', category: 'Application Développée', link: '/applications' },
     { title: 'Feselma Digital - Agence Digitale (feselmadigital.com)', category: 'Partenaire Officiel', link: '/partners' },
     { title: 'SDM - Services Digitaux & Maintenance IT', category: 'Partenaire Officiel', link: '/partners' },
     { title: 'Merveille Bat - Construction & Gestion Locative', category: 'Partenaire Officiel', link: '/partners' },
@@ -74,6 +80,7 @@ export default function Navbar() {
     { title: 'Miss Drone Company - Imagerie Aérienne & Drones HD', category: 'Partenaire Officiel', link: '/partners' },
     { title: 'Formation Informatique Bureautique (Word, Excel, PowerPoint, Access)', category: 'YOU KNOW ACADEMY', link: '/services' },
     { title: 'Formation IA & Création de Sites Web', category: 'YOU KNOW ACADEMY', link: '/services' },
+    { title: 'Communauté YOU KNOW (Forums, Ateliers & Mentors)', category: 'Réseau Groupe', link: '/community' },
     { title: 'Contacter l\'Équipe YOU KNOW (+221 70 200 72 85)', category: 'Contact Direct', link: '/contact' },
   ].filter(item => 
     searchQuery === '' || 
@@ -216,7 +223,7 @@ export default function Navbar() {
                   <img 
                     src={logo} 
                     alt="YOU KNOW SOCIETY" 
-                    className="relative h-8 sm:h-10 lg:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                    className="relative h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
                     referrerPolicy="no-referrer" 
                   />
                 </div>
